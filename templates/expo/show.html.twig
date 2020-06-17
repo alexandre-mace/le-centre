@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Expo{% endblock %}
+
+{% block body %}
+    <h1>Expo</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ expo.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ expo.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ expo.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('expo_index') }}">back to list</a>
+
+    <a href="{{ path('expo_edit', {'id': expo.id}) }}">edit</a>
+
+    {{ include('expo/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le centre - Programmation{% endblock %}
+
+{% block body %}
+<ul>
+    {% for expo in expos %}
+        <li>
+            <p>{{ expo.title }}</p>
+            <div>{{ expo.description }}</div>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
