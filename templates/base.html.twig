@@ -4,19 +4,45 @@
         <meta charset="UTF-8">
         <title>{% block title %}Le centre{% endblock %}</title>
         {% block stylesheets %}
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
             <link rel="stylesheet" href="/css/style.css">
-            <link href="{{ asset('css/materialize.css') }}" rel="stylesheet"/>
         {% endblock %}
     </head>
     <body>
-        <header>
-            <a href="{{ path('home') }}">Le centre</a>
-            <a href="{{ path('planning') }}">Programme</a>
+        <header class="header py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-auto mr-auto">
+                        <div><a href="{{ path('home') }}">Logo</a></div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="row">
+                            <div class="col">
+                                <div><a href="{{ path('planning') }}">Programmation</a></div>
+                            </div>
+                            <div class="col-auto">
+                                <div><a href="{{ path('practical_info') }}">Infos pratiques</a></div>
+                            </div>
+                            <div class="col-auto">
+                                <div><a href="{{ path('access_plan') }}">Plan d'accès</a></div>
+                            </div>
+                            <div class="col-auto">
+                                <div><a href="{{ path('ticket') }}">Billetterie</a></div>
+                            </div>
+                            <div class="col-auto">
+                                <div>fr/en</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
         {% block body %}{% endblock %}
+        {% block footer %}
+            {{ include('footer.html.twig') }}
+        {% endblock %}
+
         {% block javascripts %}
-            <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-            <script type="text/javascript" src="{{ asset('js/materialize.min.js') }}"></script>
             <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
         {% endblock %}
     </body>

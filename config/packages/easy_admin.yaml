@@ -1,0 +1,144 @@
+easy_admin:
+  entities:
+    Exposition:
+      class: App\Entity\Exposition
+      label: Expositions
+      list:
+        fields:
+          - { property: 'id' }
+          - { property: 'title', label: 'Titre' }
+          - { property: 'thematique', label: 'Thématique' }
+          - { property: 'startAt', label: 'Début' }
+          - { property: 'endAt', label: 'Fin' }
+          - { property: 'artistName', label: "Nom de l'artiste" }
+          - { property: 'longDescription', label: 'Description longue' }
+          - { property: 'type', label: 'Type' }
+      show:
+        fields:
+          - { property: 'id' }
+          - { property: 'bannerImage', type: 'image', base_path: '%app.path.images%', label: 'Bannière' }
+          - { property: 'tinyImage', type: 'image', base_path: '%app.path.images%', label: 'Miniature' }
+          - { property: 'title', label: 'Titre' }
+          - { property: 'shortDescription', label: 'Description courte' }
+          - { property: 'thematique', label: 'Thématique' }
+          - { property: 'startAt', label: 'Début' }
+          - { property: 'endAt', label: 'Fin' }
+          - { property: 'artistName', label: "Nom de l'artiste" }
+          - { property: 'longDescription', label: 'Description longue' }
+          - { property: 'artistPortrait', label: "Portrait de l'artiste" }
+          - { property: 'artistPhoto', type: 'image', base_path: '%app.path.images%', label: "Photo de l'artiste" }
+          - { property: 'firstImageDescription', label: 'Description de la première image' }
+          - { property: 'secondImageDescription', label: 'Description de la seconde image' }
+          - { property: 'type', label: 'Type' }
+      form:
+        fields:
+          - { property: 'bannerImageFile', type: 'vich_image' }
+          - { property: 'tinyImageFile', type: 'vich_image' }
+          - { property: 'title', label: 'Titre' }
+          - { property: 'shortDescription', label: 'Description courte' }
+          - { property: 'thematique', label: 'Thématique' }
+          - { property: 'startAt', label: 'Début' }
+          - { property: 'endAt', label: 'Fin' }
+          - { property: 'artistName', label: "Nom de l'artiste" }
+          - { property: 'longDescription', label: 'Description longue' }
+          - { property: 'artistPortrait', label: "Portrait de l'artiste" }
+          - { property: 'artistPhotoFile', type: 'vich_image' }
+          - { property: 'firstImageDescription', label: 'Description de la première image' }
+          - { property: 'secondImageDescription', label: 'Description de la seconde image' }
+          - { property: 'type', type: 'choice', type_options: {choices: ['Exposition artiste', 'Exposition collective']} }
+    HomePage:
+      class: App\Entity\HomePage
+      label: Page d'accueil
+      list:
+        fields:
+          - { property: 'id' }
+          - { property: 'openInfo', label: "Informations d'ouverture" }
+          - { property: 'secondSectionImage', type: 'image', base_path: '%app.path.images%', label: 'Image de la seconde section' }
+      show:
+        fields:
+          - { property: 'id' }
+          - { property: 'openInfo', label: "Informations d'ouverture" }
+          - { property: 'secondSectionImage', type: 'image', base_path: '%app.path.images%', label: 'Image de la seconde section' }
+      form:
+        fields:
+          - { property: 'openInfo', label: "Informations d'ouverture" }
+          - { property: 'secondSectionImageFile', type: 'vich_image' }
+    InstagramGallery:
+      class: App\Entity\InstagramGallery
+      label: Expositions
+      list:
+        fields:
+          - { property: 'id' }
+          - { property: 'firstImage', type: 'image', base_path: '%app.path.images%', label: 'Première image' }
+          - { property: 'firstDescription', label: 'Première description' }
+          - { property: 'secondImage', type: 'image', base_path: '%app.path.images%', label: 'Seconde image' }
+          - { property: 'secondDescription', label: 'Seconde description' }
+          - { property: 'thirdImage', type: 'image', base_path: '%app.path.images%', label: 'Troisième image' }
+          - { property: 'thirdDescription', label: 'Troisième description' }
+          - { property: 'longDescription', label: 'Description longue' }
+      show:
+        fields:
+          - { property: 'id' }
+          - { property: 'firstImage', type: 'image', base_path: '%app.path.images%', label: 'Première image' }
+          - { property: 'firstDescription', label: 'Première description' }
+          - { property: 'secondImage', type: 'image', base_path: '%app.path.images%', label: 'Seconde image' }
+          - { property: 'secondDescription', label: 'Seconde description' }
+          - { property: 'thirdImage', type: 'image', base_path: '%app.path.images%', label: 'Troisième image' }
+          - { property: 'thirdDescription', label: 'Troisième description' }
+          - { property: 'longDescription', label: 'Description longue' }
+      form:
+        fields:
+          - { property: 'firstImageFile', type: 'vich_image' }
+          - { property: 'firstDescription', label: 'Première description' }
+          - { property: 'secondImageFile', type: 'vich_image'  }
+          - { property: 'secondDescription', label: 'Seconde description' }
+          - { property: 'thirdImageFile', type: 'vich_image' }
+          - { property: 'thirdDescription', label: 'Troisième description' }
+          - { property: 'longDescription', label: 'Description longue' }
+    MediaSection:
+      class: App\Entity\MediaSection
+      label: Section Media
+      list:
+        fields:
+          - { property: 'id' }
+          - { property: 'image', type: 'image', base_path: '%app.path.images%', label: 'Image' }
+      show:
+        fields:
+          - { property: 'id' }
+          - { property: 'image', type: 'image', base_path: '%app.path.images%', label: 'Image' }
+      form:
+        fields:
+          - { property: 'imageFile', type: 'vich_image' }
+    PracticalInfo:
+      class: App\Entity\PracticalInfo
+      label: Infos pratiques
+      list:
+        fields:
+          - { property: 'id' }
+          - { property: 'description', label: 'Description' }
+      show:
+        fields:
+          - { property: 'id' }
+          - { property: 'description', label: 'Description' }
+      form:
+        fields:
+          - { property: 'description', label: 'Description' }
+    TicketInfo:
+      class: App\Entity\TicketInfo
+      label: Info Billeterie
+      list:
+        fields:
+          - { property: 'id' }
+          - { property: 'description', label: 'Description' }
+      show:
+        fields:
+          - { property: 'id' }
+          - { property: 'description', label: 'Description' }
+      form:
+        fields:
+          - { property: 'description', label: 'Description' }
+  site_name: 'Le centre'
+  user:
+    display_name: false
+    display_avatar: false
+
