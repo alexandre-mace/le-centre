@@ -1,26 +1,71 @@
 header {
     background-color: gray;
     color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+    top: 0;
+}
+body {
+    padding-top: 120px;
+}
+header * {
+    font-weight: bold;
+}
+.header-ticket-link {
+    color: black;
+    background-color: white;
+    padding: 25px 40px;
+}
+.header-ticket-link:hover {
+    color: black;
+}
+.section-title {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.section-subtitle {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
 }
 .home-main {
-    background-color: black;
+    background-image: url("https://via.placeholder.com/1920x880/6A6A6A/FFFFFF");
+    background-size: cover;
+    padding-top: 100px;
+    color: white;
+    height: calc(100vh - 120px);
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.current-event-content {
+    background-image: url("https://via.placeholder.com/1140x312/9D9D9D/FFFFFF");
+    background-size: cover;
+    height: 312px;
+    color: white;
+    padding: 50px 30px;
+}
+.coming-content {
+    background-image: url("https://via.placeholder.com/500x240/9D9D9D/FFFFFF");
+    background-size: cover;
+    height: 312px;
     color: white;
 }
 .coming {
-    background-color: gray;
-    color: white;
+    background-color: lightgray;
 }
 .blog {
-    background-color: gray;
-    color: white;
+    background-color: lightgray;
 }
 .footer {
-    background-color: gray;
-    color: white;
+    background-color: lightgray;
 }
 a {
     color: inherit;
 }
 a:hover {
     color: inherit;
+    text-decoration: unset;
 }
