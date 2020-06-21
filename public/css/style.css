@@ -1,15 +1,39 @@
 header {
-    background-color: gray;
+    background-color: #1D1D1B;
     color: white;
     padding-left: 40px;
     padding-right: 40px;
-    position: fixed;
-    width: 100vw;
     z-index: 1;
     top: 0;
 }
+.pre-header {
+    background-image: url('https://via.placeholder.com/1920x44/434241/FFFFFF');
+    height: 44px;
+    color: white;
+}
+.over {
+    z-index: 10;
+}
+.white-line {
+    position: absolute;
+    border: 1px solid white;
+    margin-top: -3%;
+    height: 110%;
+    display: block;
+    left: 50%;
+    z-index: 3;
+
+}
+.planning {
+    background-color: #282828;
+    color: white;
+}
+.secondary-square {
+    height: 40px;
+    width: 40px;
+    border: 1px solid white;
+}
 body {
-    padding-top: 120px;
 }
 header * {
     font-weight: bold;
@@ -17,7 +41,7 @@ header * {
 .header-ticket-link {
     color: black;
     background-color: white;
-    padding: 25px 40px;
+    padding: 52px 40px;
 }
 .header-ticket-link:hover {
     color: black;
@@ -36,21 +60,56 @@ header * {
     background-size: cover;
     padding-top: 100px;
     color: white;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 164px);
     padding-left: 40px;
     padding-right: 40px;
 }
-.current-event-content {
-    background-image: url("https://via.placeholder.com/1140x312/9D9D9D/FFFFFF");
-    background-size: cover;
-    height: 312px;
+.current-event {
+    background-color: #1D1D1B;
     color: white;
-    padding: 50px 30px;
+}
+.current-event-content {
+    background-image: url("https://via.placeholder.com/1140x342/9D9D9D/FFFFFF");
+    background-size: cover;
+    height: 342px;
+    color: white;
+}
+.current-event-subtitle {
+    color: black;
+    background-color: white;
+    width: auto;
+    display: inline-block;
+    padding: 10px 25px;
+}
+.current-event-square {
+    padding: 30px 10px;
+    height: 77px;
+    width: 77px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #FFFFFF;
+}
+.current-event--second-square {
+    margin-left: -70px;
+    width: 70px;
+    height: 70px;
+}
+.current-event--main-square {
+    padding: 30px 10px;
+    height: 90px;
+    width: 90px;
+    background: transparent;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid white;
 }
 .coming-content {
     background-image: url("https://via.placeholder.com/500x240/9D9D9D/FFFFFF");
     background-size: cover;
-    height: 312px;
+    height: 240px;
     color: white;
 }
 .coming {
@@ -65,7 +124,119 @@ header * {
 a {
     color: inherit;
 }
+.color-white {
+    color: white;
+}
+.instagram-second-photo {
+    height: 152px;
+}
+.instagram-third-photo {
+    height: 290px;
+}
+.pointer-square {
+    height: 68px;
+    width: 68px;
+    border: 10px solid #000000;
+}
+.instagram-gallery {
+    background-color: #F8F8F8;
+}
+.instagram-gallery .pointer-square {
+    margin-top: 108px;
+}
+.instagram-text-block {
+    background-color: white;
+    color: black;
+    padding: 30px 15px;
+}
+.instagram-first-photo-title {
+    text-align: left;
+    letter-spacing: 0px;
+    color: #1D1D1B;
+    text-transform: uppercase;
+    opacity: 1;
+}
+.instagram-text-block-title {
+    text-align: right;
+    letter-spacing: 0px;
+    color: #1D1D1B;
+    text-transform: uppercase;
+    opacity: 1;
+}
+.instagram-text-block-quote {
+    text-align: right;
+    letter-spacing: 0px;
+    color: #1D1D1B;
+    opacity: 1;
+}
+.instagram-text-block-subtitle {
+    text-align: right;
+    color: #1D1D1B;
+    opacity: 1;
+}
 a:hover {
     color: inherit;
     text-decoration: unset;
+}
+.instagram-first-photo {
+    height: 320px;
+    background-size: cover;
+}
+.blog-image {
+    height: 146px;
+}
+.social {
+    background-color: black;
+    color: white;
+}
+.second-white-line {
+    margin-top: 0;
+    height: 100%;
+    z-index: 0;
+}
+.ternary-square {
+    height: 40px;
+    width: 40px;
+    border: 1px solid white;
+    z-index: 5;
+    background-color: black;
+}
+.social-image {
+    height: 46px;
+    width: 46px;
+}
+.rights {
+    color: white;
+    background-color: black;
+}
+.footer-sublink {
+    font-size: 14px;
+    font-weight: lighter;
+}
+.footer-link {
+    font-size: 18px;
+}
+.right {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 13px;
+}
+.planning-first-photo {
+    height: 505px;
+}
+.planning-row {
+    height: 505px;
+}
+.planning-first-photo-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 505px;
+    width: 50%;
+}
+.planning-over {
+    z-index: 2;
+}
+.planning-second-photo {
+    height: 324px;
 }

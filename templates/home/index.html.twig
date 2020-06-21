@@ -5,8 +5,8 @@
 {% block body %}
     <div class="home-main">
     <div class="container-fluid py-5">
-        <div class="row my-4 py-4 ">
-            <div class="col-auto offset-1">
+        <div class="row mb-4 mt-5 pt-5">
+            <div class="col-auto offset-4">
                 Une info horaire
             </div>
         </div>
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="row mt-5 py-5">
-            <div class="col-auto ml-auto">
+            <div class="col-auto offset-9">
                 Une info de réservation
             </div>
         </div>
@@ -31,27 +31,38 @@
     </div>
     </div>
     <div class="current-event">
-        <div class="container  py-5">
+        <div class="container  py-4">
             <div class="row">
                 <div class="col-auto">
                     <div class="section-title">En ce moment</div>
                     <div class="section-subtitle">Quelque chose se prépare</div>
                 </div>
             </div>
-            <div class="row current-event-content justify-content-between">
-                <div class="col-auto d-flex flex-column justify-content-end">
-                    <div>Titre de l'expo</div>
-                    <div>Description courte</div>
-                    <div>Thématique</div>
-                </div>
-                <div class="col-auto d-flex flex-column justify-content-start">
-                    BLABLA
+            <div class="row">
+                <div class="col">
+                    <div class="row m-0 current-event-content justify-content-between">
+                        <div class="col-8 d-flex flex-column justify-content-end pb-0 pl-0">
+                            <div class="ml-4 mb-3">Saison culturelle Africa 2020</div>
+                            <div>
+                                <div class="current-event-subtitle">Exposition collective initiée par l'institut francais</div>
+                            </div>
+                        </div>
+                        <div class="col-4 d-flex flex-column justify-content-between align-items-end pt-0 pr-0">
+                            <div class="d-flex">
+                                <div class="mr-3 mt-3">collectif africa</div>
+                                <div class="current-event--main-square">date</div>
+                            </div>
+                            <div>
+                                <div class="current-event--main-square">date</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="coming">
-        <div class="container  py-5">
+        <div class="container  py-4">
             <div class="row">
                 <div class="col-auto">
                     <div class="section-title">A venir</div>
@@ -60,41 +71,84 @@
             </div>
             <div class="row">
                 <div class="col text-center">
-                    <div class="coming-content">
-                        BLABLA
+                    <div class="coming-content row m-0 justify-content-between">
+                        <div class="col-auto d-flex flex-column justify-content-end pb-4 pl-4 text-left">
+                            <div class="font-weight-bold">Titre de l'expo</div>
+                            <div class="font-weight-light">Description courte</div>
+                        </div>
+                        <div class="col-auto d-flex flex-column justify-content-start pr-0">
+                            <div class="current-event--main-square">IMAGE</div>
+                        </div>
                     </div>
                 </div>
                 <div class="col text-center">
-                    <div class="coming-content">
-                        BLABLA
+                    <div class="coming-content d-flex align-items-end">
+                        <div class="col-auto offset-9 mb-5 current-event--main-square">IMAGE</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="instagram-gallery">
-        <div class="container  py-5">
+        <div class="container  py-4">
             <div class="row">
                 <div class="col-auto">
-                    <div class="section-title">Atelier</div>
-                    <div class="section-subtitle">Au coeur des oeuvres</div>
+                    <div class="section-title mb-2">Au coeur des oeuvres</div>
                 </div>
             </div>
             <div class="row">
-                <div class="col ">
+                <div class="col p-2">
                     <div class="d-flex flex-column">
-                        <div>PHOTO</div>
-                        <div>Tag compte le centre</div>
+                        <div class="instagram-first-photo p-3 d-flex flex-column justify-content-end" style="background-image: url('https://via.placeholder.com/400x320/9D9D9D/FFFFFF')">
+                            <div class="color-white">Tag utilisateur</div>
+                        </div>
+                        <div class="mt-3 instagram-first-photo-title">La sélection mensuelle du Centre</div>
                     </div>
                 </div>
-                <div class="col ">
-                    <div class="d-flex flex-column">
-                        <div>PHOTO</div>
-                        <div>PHOTO</div>
+                <div class="col pr-0 py-2 pl-2">
+                    <div class="row m-0 d-flex flex-column">
+                        <div class="col-6 mb-3 p-0"><div class="instagram-second-photo" style="background-image: url('https://via.placeholder.com/500x152/9D9D9D/FFFFFF')"></div></div>
+                        <div class="col p-0"><div class="instagram-third-photo" style="background-image: url('https://via.placeholder.com/500x289/9D9D9D/FFFFFF')"></div></div>
                     </div>
                 </div>
-                <div class="col ">
-                    BLABLA
+                <div class="col-auto pr-2 pl-0">
+                    <div class="pointer-square"></div>
+                </div>
+                <div class="col p-2">
+                    <div class="instagram-text-block">
+                        <div class="instagram-text-block-title">Le Concept du mois</div>
+                        <div class="instagram-text-block-quote">« Speed-painting »</div>
+                        <div class="instagram-text-block-subtitle">Tête-à-tête avec l'oeuvre d'art</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blog">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col text-center mb-3">
+                    <div class="section-title">On vous en dit plus</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex flex-column">
+                        <div class="section-subtitle">blabla</div>
+                        <div class="blog-image" style="background-image: url('https://via.placeholder.com/350x146/9D9D9D/FFFFFF')"></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-flex flex-column">
+                        <div class="section-subtitle">blabla</div>
+                        <div class="blog-image" style="background-image: url('https://via.placeholder.com/350x146/9D9D9D/FFFFFF')"></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="d-flex flex-column">
+                        <div class="section-subtitle">blabla</div>
+                        <div class="blog-image" style="background-image: url('https://via.placeholder.com/350x146/9D9D9D/FFFFFF')"></div>
+                    </div>
                 </div>
             </div>
         </div>
