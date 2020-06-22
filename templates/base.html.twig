@@ -18,11 +18,11 @@
                 </div>
             </div>
         </div>
-        <header class="header py-5">
+        <header class="header">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-auto mr-auto">
-                        <div><a href="{{ path('home') }}">Logo</a></div>
+                        <div><a href="{{ path('home') }}"><img src="{{ asset('images/LOGO-CENTRE.png') }}" alt=""></a></div>
                     </div>
                     <div class="col-auto">
                         <div class="row">
@@ -51,7 +51,11 @@
             {{ include('footer.html.twig') }}
         {% endblock %}
 
+        <div class="cursor cursor--large"></div>
+        <div class="cursor cursor--small"></div>
+
         {% block javascripts %}
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
             <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
         {% endblock %}
     </body>

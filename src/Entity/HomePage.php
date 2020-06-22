@@ -36,6 +36,16 @@ class HomePage
      */
     private $secondSectionImageFile;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Exposition::class, inversedBy="currentExpositionHomepages")
+     */
+    private $currentExposition;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Exposition::class, inversedBy="artistExpositionHomePages")
+     */
+    private $artistExposition;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -79,5 +89,29 @@ class HomePage
     public function setSecondSectionImageFile($secondSectionImageFile)
     {
         $this->secondSectionImageFile = $secondSectionImageFile;
+    }
+
+    public function getCurrentExposition(): ?Exposition
+    {
+        return $this->currentExposition;
+    }
+
+    public function setCurrentExposition(?Exposition $currentExposition): self
+    {
+        $this->currentExposition = $currentExposition;
+
+        return $this;
+    }
+
+    public function getArtistExposition(): ?Exposition
+    {
+        return $this->artistExposition;
+    }
+
+    public function setArtistExposition(?Exposition $artistExposition): self
+    {
+        $this->artistExposition = $artistExposition;
+
+        return $this;
     }
 }

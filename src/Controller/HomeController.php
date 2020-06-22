@@ -21,9 +21,9 @@ class HomeController extends AbstractController
     {
         $homePage = $homePageRepository->findAll() ? $homePageRepository->findAll()[0] : null;
         $instagramGallery = $instagramGalleryRepository->findAll() ? $instagramGalleryRepository->findAll()[0] : null;
-        $mediaSection = $mediaSectionRepository->findAll() ? $mediaSectionRepository->findAll()[0] : null;
+        $mediaSection = $mediaSectionRepository->findAll() ? $mediaSectionRepository->findAll() : null;
         return $this->render('home/index.html.twig', [
-            'homePage' => $homePage,
+            'homepage' => $homePage,
             'instagramGallery' => $instagramGallery,
             'mediaSection' => $mediaSection,
         ]);

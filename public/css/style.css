@@ -1,13 +1,15 @@
+body {
+    cursor: none;
+}
 header {
     background-color: #1D1D1B;
     color: white;
-    padding-left: 40px;
-    padding-right: 40px;
     z-index: 1;
     top: 0;
+    padding: 2rem 40px;
 }
 .pre-header {
-    background-image: url('https://via.placeholder.com/1920x44/434241/FFFFFF');
+    background-image: url('/images/header-stickymenu-bg.png');
     height: 44px;
     color: white;
 }
@@ -25,7 +27,7 @@ header {
 
 }
 .planning {
-    background-color: #282828;
+    background-color: #1D1D1B;
     color: white;
 }
 .secondary-square {
@@ -41,7 +43,7 @@ header * {
 .header-ticket-link {
     color: black;
     background-color: white;
-    padding: 52px 40px;
+    padding: 51px 40px;
 }
 .header-ticket-link:hover {
     color: black;
@@ -56,11 +58,11 @@ header * {
     margin-bottom: 15px;
 }
 .home-main {
-    background-image: url("https://via.placeholder.com/1920x880/6A6A6A/FFFFFF");
+    background-image: url("/images/home-herofullscreen-bg-.png");
     background-size: cover;
     padding-top: 100px;
     color: white;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 200px);
     padding-left: 40px;
     padding-right: 40px;
 }
@@ -69,7 +71,6 @@ header * {
     color: white;
 }
 .current-event-content {
-    background-image: url("https://via.placeholder.com/1140x342/9D9D9D/FFFFFF");
     background-size: cover;
     height: 342px;
     color: white;
@@ -117,6 +118,7 @@ header * {
 }
 .blog {
     background-color: lightgray;
+    color: white;
 }
 .footer {
     background-color: lightgray;
@@ -239,4 +241,140 @@ a:hover {
 }
 .planning-second-photo {
     height: 324px;
+}
+.exposition-main-image {
+    height: 469px;
+}
+.exposition-secondary-image {
+    height: 307px;
+}
+.exposition-small-image {
+    width: 154px;
+    height: 147px;
+}
+.exposition--main-square {
+    height: 100%;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+.exposition {
+    background-color: gray;
+    padding-bottom: 3rem;
+    color: white;
+}
+.exposition-small-image-description {
+    margin-left: -120px;
+}
+.exposition-description {
+    background-color: white;
+    color: black;
+    padding: 6px 25px;
+    margin-left: -28px;
+}
+.exposition-ternary-square {
+    background-color: transparent;
+}
+.practical-info-text-block {
+    background-color: white;
+    color: black;
+    padding: 30px 20px;
+}
+.practical-info {
+    background-color: #262626;
+    color: white;
+}
+.practical-info-main-square {
+    width: auto;
+}
+.practical-info-text-block-up {
+    margin-top: -40px;
+}
+.access-plan {
+    background-color: #262626;
+    color: white;
+}
+.access-plan-plan {
+    height: 602px;
+}
+.ticket {
+    background-color: #262626;
+    color: white;
+}
+.ticket-form {
+    padding: 30px 40px 50px 40px;
+    border-top: 10px solid white;
+    border-bottom: 10px solid white;
+    border-right: 10px solid white;
+}
+.primary-button {
+    padding: 13px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    font-weight: bold;
+}
+.secondary-button {
+    padding: 13px 20px;
+    color: white;
+    background-color: black;
+    border: none;
+    font-weight: bold;
+}
+.ticket-resume {
+    padding: 21px 24px 60px 24px;
+    background-color: #2B2B2A;
+    color: white;
+}
+input {
+    color: #B7B7B7;
+    background-color: black;
+    border: none;
+    height: 33px;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    padding-left: 10px;
+}
+input:focus {
+    outline: none;
+}
+.exposition-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 235px;
+}
+.back-transparent {
+    background-color: #1D1D1B;
+}
+.cursor {
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 100;
+}
+.cursor--large {
+    --size: 70px;
+    border: 1px solid white;
+}
+.cursor--small {
+    border-radius: 50%;
+    --size: 8px;
+    background: white;
+}
+a:hover {
+    cursor: none !important;
+}
+.move {
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -ms-transition-property: -ms-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
 }

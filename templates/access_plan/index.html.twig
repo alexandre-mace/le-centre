@@ -3,18 +3,31 @@
 {% block title %}Hello AccessPlanController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/alex/Bureau/le-centre/src/Controller/AccessPlanController.php'|file_link(0) }}">src/Controller/AccessPlanController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/alex/Bureau/le-centre/templates/access_plan/index.html.twig'|file_link(0) }}">templates/access_plan/index.html.twig</a></code></li>
-    </ul>
+<div class="access-plan py-5" style="background-image: url(/images/planacces-bg-page.png)">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col">
+                <div class="access-plan-plan" style="background-image: url(/images/planacces-carte-position-centre.png)">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 mb-3">
+            <div class="col">
+                <div>Plan d'accès</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="mb-3">arriver au centre en voiture</div>
+                <div>Le Centre, Base Sous-Marine Impasse Brown de Colstoun, 33000 Bordeaux Pour les automobilistes, un parking permet de profiter gratuitement d'une possibilité de stationnement. A10 puis rocade A630/E5/E606. Prendre la sortie 4 « Zone Industrielle Blanquefort, Bordeaux-Nord ». Prendre le Boulevard Aliénor d'Aquitaine, prendre à gauche Place de Latule puis immédiatement à droite, Boulevard Alfred Daney. Continuer 30 mètres sur Boulevard Alfred Daney, la Base sous-marine se trouve sur votre droite. Le parking est gratuit.</div>
+            </div>
+            <div class="col-6">
+                <div class="mb-3">par les transports en commun</div>
+                <div>Tram B : arrêt La Cité du vin Tram C : arrêt Ravezies V3 : station Lucien Faure Bus : arrêt Latule liane 9 et 32</div>
+                <div class="my-3">les Services</div>
+                <div>Accès pour les personnes en situation de handicap (PMR)</div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

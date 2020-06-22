@@ -31,6 +31,11 @@ class MediaSection
      */
     private $imageFile;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $title;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -62,5 +67,17 @@ class MediaSection
     public function setImageFile($imageFile)
     {
         $this->imageFile = $imageFile;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
+
+        return $this;
     }
 }

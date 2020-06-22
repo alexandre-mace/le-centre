@@ -54,18 +54,24 @@ easy_admin:
           - { property: 'id' }
           - { property: 'openInfo', label: "Informations d'ouverture" }
           - { property: 'secondSectionImage', type: 'image', base_path: '%app.path.images%', label: 'Image de la seconde section' }
+          - { property: 'currentExposition', label: 'Exposition collective' }
+          - { property: 'artistExposition', label: "Exposition d'artiste" }
       show:
         fields:
           - { property: 'id' }
           - { property: 'openInfo', label: "Informations d'ouverture" }
           - { property: 'secondSectionImage', type: 'image', base_path: '%app.path.images%', label: 'Image de la seconde section' }
+          - { property: 'currentExposition', label: 'Exposition collective' }
+          - { property: 'artistExposition', label: "Exposition d'artiste" }
       form:
         fields:
           - { property: 'openInfo', label: "Informations d'ouverture" }
-          - { property: 'secondSectionImageFile', type: 'vich_image' }
+          - { property: 'secondSectionImageFile', type: 'vich_image', label: 'Image de la seconde section' }
+          - { property: 'currentExposition', type: 'entity', label: 'Exposition en ce moment' }
+          - { property: 'artistExposition', type: 'entity', label: "Exposition d'artiste" }
     InstagramGallery:
       class: App\Entity\InstagramGallery
-      label: Expositions
+      label: Gallerie instagram
       list:
         fields:
           - { property: 'id' }
@@ -88,11 +94,11 @@ easy_admin:
           - { property: 'longDescription', label: 'Description longue' }
       form:
         fields:
-          - { property: 'firstImageFile', type: 'vich_image' }
+          - { property: 'firstImageFile', type: 'vich_image', label: 'Première image' }
           - { property: 'firstDescription', label: 'Première description' }
-          - { property: 'secondImageFile', type: 'vich_image'  }
+          - { property: 'secondImageFile', type: 'vich_image', label: 'Seconde image'  }
           - { property: 'secondDescription', label: 'Seconde description' }
-          - { property: 'thirdImageFile', type: 'vich_image' }
+          - { property: 'thirdImageFile', type: 'vich_image', label: 'Troisième image' }
           - { property: 'thirdDescription', label: 'Troisième description' }
           - { property: 'longDescription', label: 'Description longue' }
     MediaSection:
@@ -102,12 +108,15 @@ easy_admin:
         fields:
           - { property: 'id' }
           - { property: 'image', type: 'image', base_path: '%app.path.images%', label: 'Image' }
+          - { property: 'title', label: 'Titre' }
       show:
         fields:
           - { property: 'id' }
           - { property: 'image', type: 'image', base_path: '%app.path.images%', label: 'Image' }
+          - { property: 'title', label: 'Titre' }
       form:
         fields:
+          - { property: 'title', label: 'Titre' }
           - { property: 'imageFile', type: 'vich_image' }
     PracticalInfo:
       class: App\Entity\PracticalInfo

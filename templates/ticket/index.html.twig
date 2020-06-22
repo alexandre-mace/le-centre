@@ -3,18 +3,84 @@
 {% block title %}Hello TicketController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/alex/Bureau/le-centre/src/Controller/TicketController.php'|file_link(0) }}">src/Controller/TicketController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/alex/Bureau/le-centre/templates/ticket/index.html.twig'|file_link(0) }}">templates/ticket/index.html.twig</a></code></li>
-    </ul>
+<div class="ticket pb-5" style="background-size:cover;background-image: url(/images/billeterie-bg-page.png)">
+    <div class="container pt-5 mb-4">
+        <div class="row">
+            <div class="col">
+                <div>Billetterie</div>
+                <div>Acheter votre pass, payer en ligne ou sur place !</div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 ticket-form">
+                <div class="col-7 offset-3">
+                    <div class="ml-4 pl-2 d-flex flex-column">
+                        <div>Réserver votre billet</div>
+                        <div class="d-flex"><input class="w-100" type="text"></div>
+                        <div class="d-flex"><input class="w-100" type="text"></div>
+                        <div class="d-flex"><input class="w-100" type="text"></div>
+                        <div><input type="checkbox">J'accepte les Conditions générales de vente du Centre.</div>
+                        <div class="text-right mt-3"><button class="primary-button">Ajouter au panier</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="col-7 pt-5 offset-1">
+                    <div>VOTRE PANIER</div>
+                    <div class="ticket-resume row">
+                        <div class="col-6 mb-3 font-weight-bold">
+                            Billet d’entrée
+                        </div>
+                        <div class="col-3 font-weight-bold">
+                            Qté
+                        </div>
+                        <div class="col-3 font-weight-bold">
+                            Prix
+                        </div>
+                        <div class="col-6">
+                            Rhizomes/Africa2020
+                        </div>
+                        <div class="col-3">
+                            2
+                        </div>
+                        <div class="col-3">
+                            3 €
+                        </div>
+                        <div class="col-6">
+                            Rhizomes/Africa2020
+                        </div>
+                        <div class="col-3">
+                            1
+                        </div>
+                        <div class="col-3">
+                            5 €
+                        </div>
+                    </div>
+                    <div class="row justify-content-end p-3">
+                        <div class="col p-0">
+                            <div class="row">
+                                <div class="col-3 text-right ml-auto">Total</div>
+                                <div class="col-3 text-right">8 €</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3 text-right ml-auto">TVA</div>
+                                <div class="col-3 text-right">0.80 €</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3 text-right ml-auto font-weight-bold">Total TTC</div>
+                                <div class="col-3 text-right">8.80 €</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 pl-0 pr-2 d-flex"><button class="primary-button w-100">Payer en ligne</button></div>
+                        <div class="col-6 pr-0 pl-2 d-flex"><button class="secondary-button w-100">Payer sur place</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

@@ -1,46 +1,50 @@
 {% if odd == true %}
     <div class="row position-relative planning-row align-items-center my-5">
         <div class="col-4 offset-1 d-flex flex-column planning-over text-right">
-            <div>saison culturelle africa 2020</div>
-            <div>Exposition collective d'artistes africains</div>
+            <div>{{ exposition.title }}</div>
+            <div>{{ exposition.shortDescription }}</div>
             <div>Initiée par l'Institut Français, cette exposition fera l'état des lieux de la scène artistique africaine. Elle accompagne les chroniques de la Base Sous-Marine, d'hier à aujourd'hui.</div>
         </div>
         <div class="planning-first-photo-wrapper">
-            <div class="planning-first-photo" style="background-image: url('https://via.placeholder.com/600x505/9D9D9D/FFFFFF')">
+            <div class="planning-first-photo" style="background-image: url(/uploads/images/{{ exposition.tinyImage }})">
                 <div class="col-6 h-100 ml-auto p-0 d-flex flex-column justify-content-between align-items-start pt-0 pr-0">
                     <div>
-                        <div class="current-event--main-square">date</div>
+                        <div class="current-event--main-square">{{ exposition.startAt|date('d') }} {{ exposition.startAt|date('M', "Europe/Paris") }}
+                            <br>{{ exposition.startAt|date('Y') }}</div>
                     </div>
                     <div>
-                        <div class="current-event--main-square">date</div>
+                        <div class="current-event--main-square">{{ exposition.endAt|date('d') }} {{ exposition.endAt|date('M', "Europe/Paris") }}
+                            <br>{{ exposition.endAt|date('Y') }}</div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-4 p-0 planning-over offset-2">
-            <div class="planning-second-photo" style="background-image: url('https://via.placeholder.com/500x324/9D9D9D/FFFFFF')"></div>
+            <div class="planning-second-photo" style="background-image: url(/uploads/images/{{ exposition.artistPhoto }})"></div>
         </div>
     </div>
 {% else %}
     <div class="row position-relative planning-row align-items-center my-5">
         <div class="col-4 offset-1 planning-over">
-            <div class="planning-second-photo" style="background-image: url('https://via.placeholder.com/500x324/9D9D9D/FFFFFF')"></div>
+            <div class="planning-second-photo" style="background-image: url(/uploads/images/{{ exposition.artistPhoto }})"></div>
         </div>
         <div class="planning-first-photo-wrapper">
-            <div class="planning-first-photo" style="background-image: url('https://via.placeholder.com/600x505/9D9D9D/FFFFFF')">
+            <div class="planning-first-photo" style="background-image: url(/uploads/images/{{ exposition.tinyImage }})">
                 <div class="col-6 h-100 mr-auto p-0 d-flex flex-column justify-content-between align-items-end pt-0 pr-0">
                     <div>
-                        <div class="current-event--main-square">date</div>
+                        <div class="current-event--main-square">{{ exposition.startAt|date('d') }} {{ exposition.startAt|date('M', "Europe/Paris") }}
+                            <br>{{ exposition.startAt|date('Y') }}</div>
                     </div>
                     <div>
-                        <div class="current-event--main-square">date</div>
+                        <div class="current-event--main-square">{{ exposition.endAt|date('d') }} {{ exposition.endAt|date('M', "Europe/Paris") }}
+                            <br>{{ exposition.endAt|date('Y') }}</div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-4 p-0 planning-over offset-2 text-left">
-            <div>saison culturelle africa 2020</div>
-            <div>Exposition collective d'artistes africains</div>
+            <div>{{ exposition.title }}</div>
+            <div>{{ exposition.shortDescription }}</div>
             <div>Initiée par l'Institut Français, cette exposition fera l'état des lieux de la scène artistique africaine. Elle accompagne les chroniques de la Base Sous-Marine, d'hier à aujourd'hui.</div>
         </div>
     </div>

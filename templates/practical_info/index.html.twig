@@ -3,18 +3,50 @@
 {% block title %}Hello PracticalInfoController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/alex/Bureau/le-centre/src/Controller/PracticalInfoController.php'|file_link(0) }}">src/Controller/PracticalInfoController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/alex/Bureau/le-centre/templates/practical_info/index.html.twig'|file_link(0) }}">templates/practical_info/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <div class="practical-info pt-5" style="background-image: url(/images/infospratiques-bg-page.png)">
+        <div class="container py-5 mt-3">
+            <div class="row mb-3">
+                <div class="col-6">
+                    Informations pratiques
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 pr-0">
+                    <div class="practical-info-text-block">
+                        <div class="font-weight-bold mb-3">Les espaces d’expositions pilotés par la Direction générale des affaires culturelles de la Ville de Bordeaux, sont temporairement fermés pour des travaux de rénovation ! Ils ré-ouvriront au premier trimestre 2021 à l’occasion d’une exposition collective intégrée à la saison culturelle Africa 2020 initiée par l’Institut Français.</div>
+                        <div>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-6 ml-auto p-0">
+                            <div class="current-event--main-square practical-info-main-square">TARIFS</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 p-0">
+                            <div class="current-event--main-square practical-info-main-square">HORAIRES</div>
+                        </div>
+                        <div class="col-6 mt-4 text-center">
+                            Gratuité <br>
+                            sous conditions * <br><br>
+                            Plein tarif : 5€ <br><br>
+                            Tarif réduit : 3€ **
+                        </div>
+                        <div class="col-6 practical-info-text-block-up text-center">
+                            Du lundi <br> au vendredi :<br> 10h - 19h <br> samedi et dimanche :<br> 10h - 13h
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-6">
+                    ** Gratuit le 1er dimanche du mois (hors juillet et août) Moins de 18 ans Titulaires de la Carte jeunes et accompagnateur majeur Étudiants des filières artistiques des universités et écoles d'art publiques : architecture, histoire de l'art, archéologie, arts plastiques, arts graphiques, design et création industrielle, métiers d'art, photographie, mode et stylisme, patrimoine et paysage Personne handicapée et accompagnateur Bénéficiaires de minimas sociaux (RSA, ASS, ATS, ASPA, ATA) Détenteurs du Pass Musée Bordaux Détenteurs du Pass Pro Détenteurs d'un Bordeaux Métropole City Pass Personnels de la Ville de Bordeaux et de Bordeaux Métropole Personnel de l'école des Beaux-Arts Détenteurs de la carte Grand donateur Journalistes et guides conférenciers Détenteurs de la carte ICOM et de la Icomos Porteurs de la carte Opération Sentinelle
+                </div>
+                <div class="col-6">
+                    * Groupes d'adultes d'au moins 10 personnes Étudiants autres que ceux bénéficiant de la gratuité Demandeurs d'emploi Titulaires de la carte famille nombreuse Détenteurs d'un abonnement annuel à la Cité du vin Association des amis du musée des Arts décoratifs et du Design Association des amis du musée d'Aquitaine Société des amis des musées de Bordeaux Amis du musée des Beaux-Arts Association des amis du CAPC et abonnés du CAPC Association Amuseum
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

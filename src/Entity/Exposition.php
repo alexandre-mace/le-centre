@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ExpositionRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -107,6 +109,22 @@ class Exposition
      * @ORM\Column(type="string", length=255)
      */
     private $type;
+
+    /**
+     * @ORM\OneToMany(targetEntity=HomePage::class, mappedBy="currentExposition")
+     */
+    private $currentExpositionHomepages;
+
+    /**
+     * @ORM\OneToMany(targetEntity=HomePage::class, mappedBy="artistExposition")
+     */
+    private $artistExpositionHomePages;
+
+    public function __construct()
+    {
+        $this->currentExpositionHomepages = new ArrayCollection();
+        $this->artistExpositionHomePages = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -327,5 +345,72 @@ class Exposition
     public function setArtistPhotoFile($artistPhotoFile)
     {
         $this->artistPhotoFile = $artistPhotoFile;
+    }
+
+    /**
+     * @return Collection|HomePage[]
+     */
+    public function getCurrentExpositionHomepages(): Collection
+    {
+        return $this->currentExpositionHomepages;
+    }
+
+    public function addCurrentExpositionHomepage(HomePage $currentExpositionHomepage): self
+    {
+        if (!$this->currentExpositionHomepages->contains($currentExpositionHomepage)) {
+            $this->currentExpositionHomepages[] = $currentExpositionHomepage;
+            $currentExpositionHomepage->setCurrentExposition($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCurrentExpositionHomepage(HomePage $currentExpositionHomepage): self
+    {
+        if ($this->currentExpositionHomepages->contains($currentExpositionHomepage)) {
+            $this->currentExpositionHomepages->removeElement($currentExpositionHomepage);
+            // set the owning side to null (unless already changed)
+            if ($currentExpositionHomepage->getCurrentExposition() === $this) {
+                $currentExpositionHomepage->setCurrentExposition(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->getTitle();
+    }
+
+    /**
+     * @return Collection|HomePage[]
+     */
+    public function getArtistExpositionHomePages(): Collection
+    {
+        return $this->artistExpositionHomePages;
+    }
+
+    public function addArtistExpositionHomePage(HomePage $artistExpositionHomePage): self
+    {
+        if (!$this->artistExpositionHomePages->contains($artistExpositionHomePage)) {
+            $this->artistExpositionHomePages[] = $artistExpositionHomePage;
+            $artistExpositionHomePage->setArtistExposition($this);
+        }
+
+        return $this;
+    }
+
+    public function removeArtistExpositionHomePage(HomePage $artistExpositionHomePage): self
+    {
+        if ($this->artistExpositionHomePages->contains($artistExpositionHomePage)) {
+            $this->artistExpositionHomePages->removeElement($artistExpositionHomePage);
+            // set the owning side to null (unless already changed)
+            if ($artistExpositionHomePage->getArtistExposition() === $this) {
+                $artistExpositionHomePage->setArtistExposition(null);
+            }
+        }
+
+        return $this;
     }
 }

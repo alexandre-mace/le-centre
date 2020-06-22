@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TicketController!{% endblock %}
+
+{% block body %}
+    <div class="ticket pb-5" style="background-size:cover;background-image: url(/images/billeterie-bg-page.png)">
+        <div class="container pt-5 mb-4">
+            <div class="row">
+                <div class="col">
+                    <div>Billetterie</div>
+                    <div>Imprimez ou téléchargez votre billet.</div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-10 ticket-form">
+                    <div class="col-7 offset-2">
+                        <div class="col-7 pt-5 p-0">
+                            <div class="mb-2">VOTRE RÉSERVATION</div>
+                            <div class="ticket-resume row m-0">
+                                <div class="col-6 offset-1 mb-3 font-weight-bold">
+                                    Billet d’entrée
+                                </div>
+                                <div class="col-3 font-weight-bold">
+                                    Qté
+                                </div>
+                                <div class="col-2 font-weight-bold">
+                                    Prix
+                                </div>
+                                <div class="col-6 offset-1">
+                                    Rhizomes/Africa2020
+                                </div>
+                                <div class="col-3">
+                                    2
+                                </div>
+                                <div class="col-2">
+                                    3 €
+                                </div>
+                                <div class="col-6 offset-1">
+                                    Rhizomes/Africa2020
+                                </div>
+                                <div class="col-3">
+                                    1
+                                </div>
+                                <div class="col-2">
+                                    5 €
+                                </div>
+                            </div>
+                            <div class="row justify-content-end pt-3 pb-3 pl-3 pr-5">
+                                <div class="col p-0">
+                                    <div class="row">
+                                        <div class="col-3 text-right ml-auto">Total</div>
+                                        <div class="col-3 text-right">8 €</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-3 text-right ml-auto">TVA</div>
+                                        <div class="col-3 text-right">0.80 €</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-3 text-right ml-auto font-weight-bold">Total TTC</div>
+                                        <div class="col-3 text-right">8.80 €</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 ml-auto pl-0 pr-3 d-flex"><button class="primary-button w-100">Payer en ligne</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,22 +1,22 @@
-<div class="social pt-2">
+<div class="social pt-2 {% if app.request.get('_route') != 'home' %}back-transparent{% endif %}">
     <div class="container pt-4 pb-5">
         <div class="row">
             <div class="col text-center mb-3">
-                <div class="section-title">Nous suivre</div>
+                <div class="section-title">NOUS SUIVRE</div>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-auto text-center">
-                <div class="social-image" style="background-image: url('https://via.placeholder.com/46x46/9D9D9D/FFFFFF')"></div>
+                <div class="social-image" style="background-image: url(/images/footer-icon-facebook.png)"></div>
             </div>
             <div class="col-auto text-center">
-                <div class="social-image" style="background-image: url('https://via.placeholder.com/46x46/9D9D9D/FFFFFF')"></div>
+                <div class="social-image" style="background-image: url(/images/footer-icon-instagram.png)"></div>
             </div>
         </div>
     </div>
 </div>
 <footer class="footer">
-    <div class="container py-4">
+    <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-auto">
                 <div class="d-flex flex-column">
