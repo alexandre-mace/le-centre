@@ -12,7 +12,7 @@
         <script type="text/javascript" src="{{ asset('js/early-script.js') }}"></script>
     </head>
     <body>
-        <div class="app-wrapper">
+        <div class="app-wrapper {% if app.request.get('_route') == 'home' %}transparent{% endif %}">
             <div class="container-fluid pre-header">
                 <div class="row d-flex h-100 justify-content-center align-items-center">
                     <div class="col-auto h-100 d-flex align-items-center">
