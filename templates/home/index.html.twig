@@ -4,10 +4,11 @@
 
 {% block body %}
     <div class="home-main">
-    <div class="container-fluid py-5">
+    <div class="container-fluid pt-5">
         <div class="row mb-4 mt-5 pt-5">
-            <div class="col-auto offset-4 move">
-                Trois expositions temporaires Une monographie
+            <div class="col-2 offset-4 move text-center">
+                <div class="square-action secondary-square mx-auto position-relative"></div>
+                <div class="hidden-text">Trois expositions temporaires Une monographie</div>
             </div>
         </div>
         <div class="row">
@@ -15,23 +16,25 @@
             </div>
         </div>
         <div class="row">
-            <div class="col mb-5 pb-5">
+            <div class="col mb-5">
             </div>
         </div>
-        <div class="row mt-5 py-5">
+        <div class="row mt-5 pt-5 pb-3">
             <div class="col-2 offset-8 text-center move">
-                Une initiative de la mairie de Bordeaux
+                <div class="square-action secondary-square mx-auto"></div>
+                <div class="hidden-text">Une initiative de la mairie de Bordeaux</div>
             </div>
         </div>
         <div class="row mt-2">
-            <div class="col-auto offset-2 move">
-                {{ homepage.openInfo }}
+            <div class="col-2 offset-2 move">
+                <div class="square-action secondary-square mx-auto current-event--main-square tiny-square"></div>
+                <div class="hidden-text">{{ homepage.openInfo }}</div>
             </div>
         </div>
     </div>
     </div>
     <div class="current-event pb-2">
-        <div class="container  py-5">
+        <div class="container pt-5">
             <div class="row">
                 <div class="col-auto">
                     <div class="section-title">En ce moment</div>
@@ -40,21 +43,23 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <div class="row m-0 current-event-content justify-content-between" style="background-image: url('/uploads/images/home-en-ce-moment.png')">
-                        <div class="col-8 d-flex flex-column justify-content-end pb-0 pl-0">
-                            <div class="ml-4 mb-3">{{ homepage.currentExposition.title }}</div>
+                    <div class="row m-0 current-event-content water justify-content-between" style="background-image: url('/uploads/images/home-en-ce-moment.png')">
+                        <div class="col-8 d-flex flex-column justify-content-between pb-0 pl-0">
+                            <div class="p-3">
+                                <div class="current-event--main-square big-dot" style="background-image: url(/uploads/images/{{ homepage.currentExposition.tinyImage }}); background-size: contain"></div>
+                            </div>
                             <div>
-                                <div class="current-event-subtitle">{{ homepage.currentExposition.thematique }}</div>
+                                <div class="ml-4 mb-3">{{ homepage.currentExposition.title }}</div>
+                                <div>
+                                    <div class="current-event-subtitle">{{ homepage.currentExposition.thematique }}</div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-4 d-flex flex-column justify-content-between align-items-end pt-0 pr-0">
                             <div class="d-flex">
-                                <div class="mr-3 mt-3">{{ homepage.currentExposition.artistName }}</div>
-                                <div class="current-event--main-square text-center">{{ homepage.currentExposition.startAt|date('d') }} {{ homepage.currentExposition.startAt|date('M', "Europe/Paris") }}
+                                <div class="mr-3 mt-3 underline pr-2">{{ homepage.currentExposition.artistName }}</div>
+                                <div class="current-event--main-square text-center no-dot">{{ homepage.currentExposition.startAt|date('d') }} {{ homepage.currentExposition.startAt|date('M', "Europe/Paris") }}
                                     <br>{{ homepage.currentExposition.startAt|date('Y') }}</div>
-                            </div>
-                            <div>
-                                <div class="current-event--main-square">Réserver un billet</div>
                             </div>
                         </div>
                     </div>
@@ -62,7 +67,7 @@
             </div>
         </div>
     </div>
-    <div class="coming pb-2" style="background-image: url('/images/home-portrait-artiste-bg.png');background-size: cover">
+    <div class="coming pb-2">
         <div class="container  py-5">
             <div class="row">
                 <div class="col-auto">
@@ -72,7 +77,7 @@
             </div>
             <div class="row">
                 <div class="col text-center">
-                    <div class="coming-content row m-0 justify-content-between" style="background-image: url(/uploads/images/{{ homepage.artistExposition.bannerImage }})">
+                    <div class="coming-content water row m-0 justify-content-between" style="background-image: url(/uploads/images/{{ homepage.artistExposition.bannerImage }})">
                         <div class="col-auto d-flex flex-column justify-content-end pb-4 pl-4 text-left">
                             <div class="font-weight-bold">{{ homepage.artistExposition.title }}</div>
                             <div class="font-weight-light">{{ homepage.artistExposition.shortDescription }}</div>
@@ -84,8 +89,15 @@
                     </div>
                 </div>
                 <div class="col text-center">
-                    <div class="coming-content d-flex align-items-end" style="background-image: url('/images/home-portrait-artiste-photoD.png')">
-                        <div class="col-auto offset-9 mb-5 current-event--main-square">IMAGE</div>
+                    <div class="coming-content water row m-0 justify-content-between" style="background-image: url(/uploads/images/{{ homepage.artistExposition.bannerImage }})">
+                        <div class="col-auto d-flex flex-column justify-content-end pb-4 pl-4 text-left">
+                            <div class="font-weight-bold">{{ homepage.artistExposition.title }}</div>
+                            <div class="font-weight-light">{{ homepage.artistExposition.shortDescription }}</div>
+                        </div>
+                        <div class="col-auto d-flex flex-column justify-content-start pr-0">
+                            <div class="current-event--main-square">{{ homepage.artistExposition.startAt|date('d') }} {{ homepage.artistExposition.startAt|date('M', "Europe/Paris") }}
+                                <br>{{ homepage.artistExposition.startAt|date('Y') }}</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -94,51 +106,41 @@
     <div class="instagram-gallery pb-2">
         <div class="container  py-5">
             <div class="row">
-                <div class="col-auto">
-                    <div class="section-title mb-2">Au coeur des oeuvres</div>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col p-2">
-                    <div class="d-flex flex-column">
-                        <div class="instagram-first-photo p-3 d-flex flex-column justify-content-end" style="background-image: url(/uploads/images/{{ instagramGallery.firstImage }})">
-                            <div class="color-white text-right">{{ instagramGallery.firstDescription }}</div>
-                        </div>
-                        <div class="mt-3 instagram-first-photo-title">La sélection mensuelle du Centre</div>
-                    </div>
-                </div>
-                <div class="col pr-0 py-2 pl-2">
-                    <div class="row m-0 d-flex flex-column">
-                        <div class="col-6 mb-3 p-0"><div class="instagram-second-photo" style="background-image: url(/uploads/images/{{ instagramGallery.secondImage }})"></div></div>
-                        <div class="col p-0"><div class="instagram-third-photo" style="background-image: url(/uploads/images/{{ instagramGallery.thirdImage }})"></div></div>
-                    </div>
-                </div>
-                <div class="col-auto pr-2 pl-0">
-                    <div class="pointer-square"></div>
-                </div>
-                <div class="col p-2">
+                    <div class="instagram-fourth-photo ml-auto water" style="background-image: url(/uploads/images/{{ instagramGallery.secondImage }})"></div>
                     <div class="instagram-text-block move">
                         <div class="instagram-text-block-title">Le Concept du mois</div>
                         <div class="instagram-text-block-quote">« Speed-painting »</div>
                         <div class="instagram-text-block-subtitle">Tête-à-tête avec l'oeuvre d'art</div>
                     </div>
                 </div>
+                <div class="col-auto pr-0 pl-0">
+                    <div class="pointer-square current-event--main-square black-big-dot"></div>
+                </div>
+                <div class="col pr-0 py-2 pl-0">
+                    <div class="row m-0 d-flex flex-column align-items-end">
+                        <div class="col-6 mb-3 p-0"><div class="instagram-second-photo water" style="background-image: url(/uploads/images/{{ instagramGallery.secondImage }})"></div></div>
+                        <div class="col p-0"><div class="instagram-third-photo water" style="background-image: url(/uploads/images/{{ instagramGallery.thirdImage }})"></div></div>
+                    </div>
+                </div>
+                <div class="col px-3 pb-3 pt-2">
+                    <div class="d-flex flex-column">
+                        <div class="instagram-first-photo p-3 d-flex flex-column justify-content-end water" style="background-image: url(/uploads/images/{{ instagramGallery.firstImage }})">
+                            <div class="color-white text-right">{{ instagramGallery.firstDescription }}</div>
+                        </div>
+                        <div class="mt-3 instagram-first-photo-title">sélection de vos photos instagram</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="blog pb-2" style="background-image: url(/images/home-explorerplus-bg.png)">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col text-left mb-3">
-                    <div class="section-title">Explorer</div>
-                </div>
-            </div>
+    <div class="blog pb-2">
+        <div class="container-fluid pb-5">
             <div class="row">
                 {% for section in mediaSection %}
-                    <div class="col">
-                        <div class="d-flex flex-column">
-                            <div class="section-subtitle text-uppercase">{{ section.title }}</div>
-                            <div class="blog-image" style="background-image: url(/uploads/images/{{ section.image }})"></div>
+                    <div class="col p-0">
+                        <div class="p-3 blog-image" style="background-image: url(/uploads/images/{{ section.image }})">
+                            <div class="section-subtitle text-uppercase blog-title">{{ section.title }}</div>
                         </div>
                     </div>
                 {% endfor %}

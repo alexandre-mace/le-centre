@@ -35,7 +35,27 @@ header {
     width: 40px;
     border: 1px solid white;
 }
-body {
+.secondary-square, .current-event--main-square {
+    position: relative;
+}
+.secondary-square::after, .current-event--main-square::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 50%;
+    display: block;
+}
+.current-event--main-square.big-dot::after {
+    width: 10px;
+    height: 10px;
+}
+.no-dot::after {
+    width: 0;
 }
 header * {
     font-weight: bold;
@@ -114,14 +134,15 @@ header * {
     color: white;
 }
 .coming {
-    background-color: lightgray;
-}
-.blog {
-    background-color: lightgray;
+    background-color: #1D1D1B;
     color: white;
 }
+.blog {
+    color: white;
+    background-color: #1D1D1B;
+}
 .footer {
-    background-color: lightgray;
+    background-color: #F2F2F2;
 }
 a {
     color: inherit;
@@ -181,14 +202,24 @@ a:hover {
     text-decoration: unset;
 }
 .instagram-first-photo {
-    height: 320px;
+    height: 333px;
     background-size: cover;
 }
 .blog-image {
-    height: 146px;
+    height: 333px;
+    background-size: 0 !important;
+}
+.blog-image:hover {
+    background-size: cover !important;
+}
+.blog-title {
+    background-color: #1D1D1B;
+    padding: 8px 15px;
+    width: auto;
+    display: inline-block;
 }
 .social {
-    background-color: black;
+    background-color: #1D1D1B;
     color: white;
 }
 .second-white-line {
@@ -197,11 +228,9 @@ a:hover {
     z-index: 0;
 }
 .ternary-square {
-    height: 40px;
-    width: 40px;
-    border: 1px solid white;
     z-index: 5;
-    background-color: black;
+    margin-right: -3px;
+    background-color: #1D1D1B;
 }
 .social-image {
     height: 46px;
@@ -360,10 +389,12 @@ input:focus {
 }
 .cursor--large {
     --size: 70px;
+    mix-blend-mode: difference;
     border: 1px solid white;
 }
 .cursor--small {
     border-radius: 50%;
+    mix-blend-mode: difference;
     --size: 8px;
     background: white;
 }
@@ -377,4 +408,79 @@ a:hover {
     -o-transition-property: -o-transform;
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+.loader{
+    height: 10px;
+    background-color: black;
+    position: absolute;
+}
+.loader-wrapper {
+    display: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
+body {
+    background-color: black;
+    position: relative;
+}
+.app-wrapper {
+    background-color: black;
+    z-index: 10;
+    transition: opacity ease-in 0.3s;
+}
+.darken {
+    opacity: 0.1;
+}
+.hidden-text {
+    margin-top: 15px;
+    opacity: 1;
+    background-color: black;
+    position: absolute;
+    display: none;
+    width: auto;
+    overflow: visible;
+    z-index: 20;
+}
+.hidden-text-container {
+    position: absolute;
+    top: 50vh;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    color: white;
+    text-align: center;
+    margin: auto;
+    background-color: transparent;
+    height: auto;
+    opacity: 1;
+    z-index: 20;
+}
+.tiny-square {
+    height: 40px;
+    width: 40px;
+    padding: 20px;
+}
+.underline {
+    text-decoration: underline;
+}
+.instagram-fourth-photo {
+    height: 199px;
+    width: 199px;
+}
+.black-big-dot {
+    height: 68px;
+    width: 68px;
+    padding: 10px;
+}
+.black-big-dot:after {
+    width: 10px;
+    height: 10px;
+    background-color: black;
 }
