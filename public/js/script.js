@@ -1,5 +1,3 @@
-console.clear();
-
 // move
 var moves = document.getElementsByClassName("move");
 document.onmousemove = function(){
@@ -139,6 +137,7 @@ $(document).ready(function () {
 
             /* This line hide loader and show content */
             setTimeout(function(){
+                document.getElementsByClassName('app-wrapper')[0].classList.remove('hide');
                 ($('.loader-wrapper')).css("background-color", "transparent");
                 (loader).fadeOut();
                 setTimeout(function () {

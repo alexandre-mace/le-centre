@@ -484,3 +484,6 @@ body {
     height: 10px;
     background-color: black;
 }
+.hide {
+    display: none;
+}

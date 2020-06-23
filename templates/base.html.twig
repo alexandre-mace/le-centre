@@ -9,6 +9,7 @@
             <link rel="stylesheet" href="/css/style.css">
             <link href="{{ asset('css/normalize.css') }}" rel="stylesheet"/>
         {% endblock %}
+        <script type="text/javascript" src="{{ asset('js/early-script.js') }}"></script>
     </head>
     <body>
         <div class="app-wrapper">
@@ -47,9 +48,6 @@
                     </div>
                 </div>
             </header>
-            <div class="loader-wrapper">
-                <div class="loader"></div>
-            </div>
             <div class="content">
                 {% block body %}{%  endblock %}
             </div>
@@ -61,7 +59,9 @@
             <div class="cursor cursor--small"></div>
         </div>
         <div class="hidden-text-container"></div>
-
+        <div class="loader-wrapper">
+            <div class="loader"></div>
+        </div>
         {% block javascripts %}
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
