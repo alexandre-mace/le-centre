@@ -491,3 +491,15 @@ body {
     opacity: 0;
     background-color: white;
 }
+.underline-text {
+    position: relative;
+}
+.underline-text::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 21px;
+    height: 1px;
+    background-color: white;
+}

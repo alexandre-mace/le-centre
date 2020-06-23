@@ -35,6 +35,12 @@ let cursorOuterOriginalState = {
     height: cursorOuter.getBoundingClientRect().height,
 };
 const buttons = document.querySelectorAll(".square-action");
+const links = document.querySelectorAll("a");
+
+links.forEach((link) => {
+    link.addEventListener("pointerenter", handleLinkMouseEnter);
+    link.addEventListener("pointerleave", handleLinkMouseLeave);
+});
 
 buttons.forEach((button) => {
     button.addEventListener("pointerenter", handleMouseEnter);
@@ -102,6 +108,19 @@ function handleMouseLeave(e) {
     });
 }
 
+function handleLinkMouseEnter(e) {
+    $('.hidden-text-container').fadeIn()
+    gsap.to(cursorOuter, 0.2, {
+        borderWidth: 5
+    });
+}
+
+function handleLinkMouseLeave(e) {
+    $('.hidden-text-container').fadeIn()
+    gsap.to(cursorOuter, 0.2, {
+        borderWidth: 1
+    });
+}
 
 // preloader
 $(document).ready(function () {
