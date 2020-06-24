@@ -86,9 +86,8 @@ updateCursor();
 function handleMouseEnter(e) {
     isStuck = true;
     const targetBox = e.currentTarget.getBoundingClientRect();
-    $('.app-wrapper').addClass('darken');
-    $('.hidden-text-container').text($(($(e.target).context.nextElementSibling))[0].innerText);
-    $('.hidden-text-container').fadeIn()
+    $(e.target).closest('.container-fluid').parent().addClass('darken');
+    $(e.target).next().addClass('opacity-1');
     gsap.to(cursorOuter, 0.2, {
         x: targetBox.left + targetBox.width / 2,
         y: (targetBox.top + targetBox.height / 2) + scrollHeight,
@@ -102,8 +101,8 @@ function handleMouseEnter(e) {
 
 function handleMouseLeave(e) {
     isStuck = false;
-    $('.hidden-text-container').fadeOut()
-    $('.app-wrapper').removeClass('darken');
+    $(e.target).closest('.container-fluid').parent().removeClass('darken');
+    $(e.target).next().removeClass('opacity-1');
     gsap.to(cursorOuter, 0.2, {
         width: cursorOuterOriginalState.width,
         height: cursorOuterOriginalState.width,

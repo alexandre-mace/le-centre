@@ -80,6 +80,7 @@ header * {
 .home-main {
     background-image: url("/images/home-herofullscreen-bg-.png");
     background-size: cover;
+    position: relative;
     color: white;
     height: calc(100vh - 200px);
     padding-left: 40px;
@@ -433,33 +434,29 @@ body {
     z-index: 10;
     transition: opacity ease-in 0.3s;
 }
-.darken {
-    opacity: 0.5;
+.darken::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all .2s linear;
 }
+
 .hidden-text {
     margin-top: 15px;
-    opacity: 1;
-    background-color: black;
-    position: absolute;
-    display: none;
+    opacity: 0;
+    display: block;
+    text-align: center;
     width: auto;
     overflow: visible;
-    z-index: 20;
+    transition: opacity ease-in 0.3s;
 }
-.hidden-text-container {
-    position: absolute;
-    top: 50vh;
-    transform: translateY(-50%);
-    left: 0;
-    width: 100%;
-    pointer-events: none;
-    color: white;
-    text-align: center;
-    margin: auto;
-    background-color: transparent;
-    height: auto;
+.opacity-1 {
     opacity: 1;
-    z-index: 20;
 }
 .tiny-square {
     height: 40px;
