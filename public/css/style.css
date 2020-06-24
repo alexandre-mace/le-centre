@@ -80,7 +80,6 @@ header * {
 .home-main {
     background-image: url("/images/home-herofullscreen-bg-.png");
     background-size: cover;
-    padding-top: 100px;
     color: white;
     height: calc(100vh - 200px);
     padding-left: 40px;
@@ -435,7 +434,7 @@ body {
     transition: opacity ease-in 0.3s;
 }
 .darken {
-    opacity: 0.1;
+    opacity: 0.5;
 }
 .hidden-text {
     margin-top: 15px;

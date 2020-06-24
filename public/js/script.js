@@ -95,6 +95,8 @@ function handleMouseEnter(e) {
         width: targetBox.width,
         height: targetBox.width,
         borderRadius: 0,
+        borderColor: "white",
+        mixBlendMode: "normal"
     });
 }
 
@@ -182,7 +184,7 @@ $(document).ready(function () {
 
     $('.home-main').ripples({
         resolution: 512,
-        dropRadius: 10,
-        perturbance: 0.000001,
+        dropRadius: 20,
+        perturbance: 0.003,
     });
 });
