@@ -120,6 +120,8 @@ function handleMouseLeave(e) {
     gsap.to(cursorOuter, 0.2, {
         width: cursorOuterOriginalState.width,
         height: cursorOuterOriginalState.width,
+        borderColor: "white",
+        mixBlendMode: "difference",
         scale: 1
     });
 }
@@ -194,16 +196,16 @@ $(document).ready(function () {
     localStorage.setItem('bsm-lecentre-preloader', 'true');
 
     // ripple
-    $('.water').ripples({
-        resolution: 512,
-        dropRadius: 20,
-        perturbance: 0.08,
-    });
-
-    $('.home-main').ripples({
-        resolution: 512,
-        dropRadius: 20,
-        perturbance: 0.003,
-    });
+    // $('.water').ripples({
+    //     resolution: 256,
+    //     dropRadius: 20,
+    //     perturbance: 0.009,
+    // });
+    //
+    // $('.home-main').ripples({
+    //     resolution: 256,
+    //     dropRadius: 20,
+    //     perturbance: 0.002,
+    // });
 });
 

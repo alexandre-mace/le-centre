@@ -56,6 +56,7 @@ easy_admin:
           - { property: 'secondSectionImage', type: 'image', base_path: '%app.path.images%', label: 'Image de la seconde section' }
           - { property: 'currentExposition', label: 'Exposition collective' }
           - { property: 'artistExposition', label: "Exposition d'artiste" }
+          - { property: 'artistExposition2', label: "Exposition d'artiste 2" }
       show:
         fields:
           - { property: 'id' }
@@ -63,12 +64,14 @@ easy_admin:
           - { property: 'secondSectionImage', type: 'image', base_path: '%app.path.images%', label: 'Image de la seconde section' }
           - { property: 'currentExposition', label: 'Exposition collective' }
           - { property: 'artistExposition', label: "Exposition d'artiste" }
+          - { property: 'artistExposition2', label: "Exposition d'artiste 2" }
       form:
         fields:
           - { property: 'openInfo', label: "Informations d'ouverture" }
           - { property: 'secondSectionImageFile', type: 'vich_image', label: 'Image de la seconde section' }
           - { property: 'currentExposition', type: 'entity', label: 'Exposition en ce moment' }
           - { property: 'artistExposition', type: 'entity', label: "Exposition d'artiste" }
+          - { property: 'artistExposition2', type: 'entity', label: "Exposition d'artiste 2" }
     InstagramGallery:
       class: App\Entity\InstagramGallery
       label: Gallerie instagram

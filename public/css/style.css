@@ -219,15 +219,11 @@ a {
     border: 10px solid #000000;
 }
 .instagram-gallery {
-    background-color: #F8F8F8;
+    background-image: url(/images/instagram-bg.png);
+    background-size: cover;
 }
 .instagram-gallery .pointer-square {
     margin-top: 108px;
-}
-.instagram-text-block {
-    background-color: white;
-    color: black;
-    padding: 30px 15px;
 }
 .instagram-first-photo-title {
     text-align: left;
@@ -246,8 +242,9 @@ a {
     font-weight: 200;
 }
 .instagram-text-block-title {
-    text-align: right;
+    text-align: left;
     letter-spacing: 0px;
+    font-style: italic;
     color: #1D1D1B;
     opacity: 1;
     font-family: 'Metropolis Extra', sans-serif;
@@ -255,8 +252,20 @@ a {
     font-style: italic;
     font-size: 18px;
 }
+.instagram-text-block {
+    background-color: white;
+    color: black;
+    z-index: 10;
+    margin-left: -367px;
+    width: 396px !important;
+    margin-top: 0 !important;
+    max-width: calc(100vw - 10vw);
+    position: absolute;
+    padding: 30px 15px;
+    text-align: left !important;
+}
 .instagram-text-block-quote {
-    text-align: right;
+    text-align: left;
     letter-spacing: 0px;
     color: #1D1D1B;
     opacity: 1;
@@ -268,12 +277,14 @@ a {
 .instagram-text-block-subtitle {
     text-align: right;
     color: #fff;
+    text-align: left;
+    padding: 2px 10px;
+    display: inline;
     opacity: 1;
     background-color: #000;
     font-family: 'Metropolis Extra', sans-serif;
     font-weight: 200;
     font-style: italic;
-    padding: 2px;
 }
 a:hover {
     color: inherit;
@@ -285,16 +296,24 @@ a:hover {
 }
 .blog-image {
     height: 333px;
-    background-size: 0 !important;
+    background-size: cover;
+    position: relative;
 }
-.blog-image:hover {
-    background-size: cover !important;
+.blog-image-container:hover .blog-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
 }
 .blog-title {
     background-color: #1D1D1B;
     padding: 8px 15px;
     width: auto;
     display: inline-block;
+    position: absolute;
 }
 .social {
     background-color: #1D1D1B;
@@ -603,8 +622,8 @@ body {
     text-decoration: underline;
 }
 .instagram-fourth-photo {
-    height: 199px;
-    width: 199px;
+    height: 166px;
+    width: 166px;
 }
 .black-big-dot {
     height: 68px;
