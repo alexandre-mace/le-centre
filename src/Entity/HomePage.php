@@ -46,6 +46,11 @@ class HomePage
      */
     private $artistExposition;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Exposition::class, inversedBy="homePagesArtistExposition2")
+     */
+    private $artistExposition2;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -111,6 +116,18 @@ class HomePage
     public function setArtistExposition(?Exposition $artistExposition): self
     {
         $this->artistExposition = $artistExposition;
+
+        return $this;
+    }
+
+    public function getArtistExposition2(): ?Exposition
+    {
+        return $this->artistExposition2;
+    }
+
+    public function setArtistExposition2(?Exposition $artistExposition2): self
+    {
+        $this->artistExposition2 = $artistExposition2;
 
         return $this;
     }

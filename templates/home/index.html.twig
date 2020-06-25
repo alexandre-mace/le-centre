@@ -10,25 +10,25 @@
             </div>
         </div>
         <div class="row mb-4 mt-5">
-            <div class="col-3 d-none d-sm-block pt-5 block-down offset-3 move text-center">
+            <div class="col-3 d-none d-sm-block pt-5 block-down offset-3 text-center">
                 <div class="square-action secondary-square mx-auto"></div>
                 <div class="hidden-text">Trois expositions temporaires <br> Une monographie</div>
             </div>
         </div>
         <div class="row">
-            <div class="col-3 d-none d-sm-block offset-8 mb-3 text-center move">
+            <div class="col-3 d-none d-sm-block offset-8 mb-3 text-center">
                 <a href="" class="square-action secondary-square mx-auto"></a>
                 <div class="hidden-text mt-0 pt-3 square-action-text"><div class="">Gagner deux places <br> gratuites</div> arrow-right</div>
             </div>
         </div>
         <div class="row pb-3">
-            <div class="col-3 d-none d-sm-block offset-7 text-center move">
+            <div class="col-3 d-none d-sm-block offset-7 text-center">
                 <div class="square-action secondary-square mx-auto"></div>
                 <div class="hidden-text">Une initiative <br> de la mairie de Bordeaux</div>
             </div>
         </div>
         <div class="row mt-2">
-            <div class="col-3 d-none d-sm-block offset-1 move">
+            <div class="col-3 d-none d-sm-block offset-1">
                 <div class="square-action secondary-square mx-auto current-event--main-square tiny-square"></div>
                 <div class="hidden-text">Ouvert tous les jours <br> de {{ homepage.openInfo }}</div>
             </div>
@@ -79,7 +79,7 @@
             <div class="row">
                 <div class="col-12 col-md-6 text-center">
                     <div class="coming-content water row m-0 justify-content-between" style="background-image: url(/uploads/images/{{ homepage.artistExposition.bannerImage }})">
-                        <div class="col-auto d-flex flex-column justify-content-end pb-4 pl-4 text-left">
+                        <div class="col-6 d-flex flex-column justify-content-end pb-4 pl-4 text-left">
                             <div class="font-weight-bold">{{ homepage.artistExposition.title }}</div>
                             <div class="font-weight-light">{{ homepage.artistExposition.shortDescription }}</div>
                         </div>
@@ -90,14 +90,14 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 text-center">
-                    <div class="coming-content water row m-0 justify-content-between" style="background-image: url(/uploads/images/{{ homepage.artistExposition.bannerImage }})">
-                        <div class="col-auto d-flex flex-column justify-content-end pb-4 pl-4 text-left">
-                            <div class="font-weight-bold">{{ homepage.artistExposition.title }}</div>
-                            <div class="font-weight-light">{{ homepage.artistExposition.shortDescription }}</div>
+                    <div class="coming-content water row m-0 justify-content-between" style="background-image: url(/uploads/images/{{ homepage.artistExposition2.bannerImage }})">
+                        <div class="col-6 d-flex flex-column justify-content-end pb-4 pl-4 text-left">
+                            <div class="font-weight-bold">{{ homepage.artistExposition2.title }}</div>
+                            <div class="font-weight-light">{{ homepage.artistExposition2.shortDescription }}</div>
                         </div>
                         <div class="col-auto d-flex flex-column justify-content-start pr-0">
-                            <div class="current-event--main-square">{{ homepage.artistExposition.startAt|date('d') }} {{ homepage.artistExposition.startAt|date('M', "Europe/Paris") }}
-                                <br>{{ homepage.artistExposition.startAt|date('Y') }}</div>
+                            <div class="current-event--main-square">{{ homepage.artistExposition2.startAt|date('d') }} {{ homepage.artistExposition2.startAt|date('M', "Europe/Paris") }}
+                                <br>{{ homepage.artistExposition2.startAt|date('Y') }}</div>
                         </div>
                     </div>
                 </div>
@@ -107,24 +107,24 @@
     <div class="instagram-gallery pb-2">
         <div class="container py-5">
             <div class="row">
-                <div class="col p-2">
+                <div class="offset-2 col-2 p-2">
                     <div class="instagram-fourth-photo ml-auto water" style="background-image: url(/uploads/images/{{ instagramGallery.secondImage }})"></div>
-                    <div class="instagram-text-block move">
+                </div>
+                <div class="col-1 pr-0 pl-0">
+                    <div class="ml-auto square-action pointer-square current-event--main-square black-big-dot"></div>
+                    <div class="instagram-text-block hidden-text">
                         <div class="instagram-text-block-title">Au coeur de l’exposition</div>
-                        <div class="instagram-text-block-quote">Votre Tête-à-tête avec les oeuvre d’art</div>
-                        <div class="instagram-text-block-subtitle">#betweentheexperience sur instagram</div>
+                        <div class="instagram-text-block-quote mt-1 mb-2">Votre Tête-à-tête avec les oeuvre d’art</div>
+                        <div class="instagram-text-block-subtitle">#<b>between</b>theexperience sur instagram</div>
                     </div>
                 </div>
-                <div class="col-auto pr-0 pl-0">
-                    <div class="pointer-square current-event--main-square black-big-dot"></div>
-                </div>
-                <div class="col pr-0 py-2 pl-0">
+                <div class="col-3 pr-0 py-2 pl-0">
                     <div class="row m-0 d-flex flex-column align-items-end">
                         <div class="col-6 mb-3 p-0"><div class="instagram-second-photo water" style="background-image: url(/uploads/images/{{ instagramGallery.secondImage }})"></div></div>
                         <div class="col p-0"><div class="instagram-third-photo water" style="background-image: url(/uploads/images/{{ instagramGallery.thirdImage }})"></div></div>
                     </div>
                 </div>
-                <div class="col-12 col-md-auto px-3 pb-3 pt-2">
+                <div class="col-12 col-md-4 px-3 pb-3 pt-2">
                     <div class="d-flex flex-column">
                         <div class="instagram-first-photo p-3 d-flex flex-column justify-content-end water" style="background-image: url(/uploads/images/{{ instagramGallery.firstImage }})">
                             <div class="color-white text-right">{{ instagramGallery.firstDescription }}</div>
@@ -139,7 +139,7 @@
         <div class="container-fluid pb-5">
             <div class="row">
                 {% for section in mediaSection %}
-                    <div class="col p-0">
+                    <div class="col p-0 blog-image-container">
                         <div class="p-3 blog-image" style="background-image: url(/uploads/images/{{ section.image }})">
                             <div class="section-subtitle text-uppercase blog-title">{{ section.title }}</div>
                         </div>

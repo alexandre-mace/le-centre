@@ -120,10 +120,16 @@ class Exposition
      */
     private $artistExpositionHomePages;
 
+    /**
+     * @ORM\OneToMany(targetEntity=HomePage::class, mappedBy="artistExposition2")
+     */
+    private $homePagesArtistExposition2;
+
     public function __construct()
     {
         $this->currentExpositionHomepages = new ArrayCollection();
         $this->artistExpositionHomePages = new ArrayCollection();
+        $this->homePagesArtistExposition2 = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -408,6 +414,37 @@ class Exposition
             // set the owning side to null (unless already changed)
             if ($artistExpositionHomePage->getArtistExposition() === $this) {
                 $artistExpositionHomePage->setArtistExposition(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|HomePage[]
+     */
+    public function getHomePagesArtistExposition2(): Collection
+    {
+        return $this->homePagesArtistExposition2;
+    }
+
+    public function addHomePagesArtistExposition2(HomePage $homePagesArtistExposition2): self
+    {
+        if (!$this->homePagesArtistExposition2->contains($homePagesArtistExposition2)) {
+            $this->homePagesArtistExposition2[] = $homePagesArtistExposition2;
+            $homePagesArtistExposition2->setArtistExposition2($this);
+        }
+
+        return $this;
+    }
+
+    public function removeHomePagesArtistExposition2(HomePage $homePagesArtistExposition2): self
+    {
+        if ($this->homePagesArtistExposition2->contains($homePagesArtistExposition2)) {
+            $this->homePagesArtistExposition2->removeElement($homePagesArtistExposition2);
+            // set the owning side to null (unless already changed)
+            if ($homePagesArtistExposition2->getArtistExposition2() === $this) {
+                $homePagesArtistExposition2->setArtistExposition2(null);
             }
         }
 
