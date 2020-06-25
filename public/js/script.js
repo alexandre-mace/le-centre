@@ -60,8 +60,8 @@ document.body.addEventListener("pointerup", () => {
 });
 
 function updateCursorPosition(e) {
-    mouse.x = e.pageX;
-    mouse.y = e.pageY;
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
 }
 
 function updateCursor() {
@@ -91,7 +91,7 @@ function handleMouseEnter(e) {
     if ($(e.target).next().hasClass('square-action-text')) {
         gsap.to(cursorOuter, 0.2, {
             x: targetBox.left + targetBox.width / 2,
-            y: (targetBox.top + targetBox.height / 2) + scrollHeight,
+            y: (targetBox.top + targetBox.height / 2),
             width: targetBox.width,
             height: targetBox.width,
             borderRadius: 0,
@@ -102,7 +102,7 @@ function handleMouseEnter(e) {
     } else {
     gsap.to(cursorOuter, 0.2, {
         x: targetBox.left + targetBox.width / 2,
-        y: (targetBox.top + targetBox.height / 2) + scrollHeight,
+        y: (targetBox.top + targetBox.height / 2),
         width: targetBox.width,
         height: targetBox.width,
         borderRadius: 0,
