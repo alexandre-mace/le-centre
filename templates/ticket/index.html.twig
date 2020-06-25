@@ -7,8 +7,8 @@
     <div class="container pt-5 mb-4">
         <div class="row">
             <div class="col">
-                <div>Billetterie</div>
-                <div>Acheter votre pass, payer en ligne ou sur place !</div>
+                <div class="ticket-title">Billetterie</div>
+                <div class="ticket-subtitle">Acheter votre pass, payer en ligne ou sur place !</div>
             </div>
         </div>
     </div>
@@ -17,7 +17,7 @@
             <div class="col-6 ticket-form">
                 <div class="col-9 offset-2">
                     <div class="ml-4 pl-2 d-flex flex-column">
-                        <div class="mb-2">Réserver votre billet</div>
+                        <div class="mb-2 ticket-reserve">Réserver votre billet</div>
                         <div class="d-flex"><input class="w-100" type="text"></div>
                         <div class="d-flex"><input class="w-100" type="text"></div>
                         <div class="d-flex"><input placeholder="Adresse mail" class="w-100" type="text"></div>
@@ -28,18 +28,18 @@
                                     <input type="checkbox">
                                     <span class="checkmark"></span>
                                 </label>
-                                <div class="ml-3 d-inline">
+                                <div class="ml-3 d-inline ticket-legals">
                                     J'accepte les <span class="underline">Conditions générales de vente</span> du Centre.</div>
                                 </div>
                             </div>
-                            <div class="text-right mt-3"><button class="primary-button">Ajouter au panier</button>
+                            <div class="text-right mt-3 ticket-button"><button class="primary-button">Ajouter au panier</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="col-7 pt-5 offset-1">
-                    <div class="">VOTRE PANIER</div>
+                    <div class="ticket-basket">VOTRE PANIER</div>
                     <div class="ticket-resume row m-0">
                         <div class="col-6 mb-3 font-weight-bold">
                             Billet d’entrée
@@ -50,44 +50,44 @@
                         <div class="col-3 font-weight-bold">
                             Prix
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 font-weight-light">
                             Rhizomes/Africa2020
                         </div>
-                        <div class="col-3">
+                        <div class="col-3 font-weight-light">
                             2
                         </div>
-                        <div class="col-3">
+                        <div class="col-3 font-weight-light">
                             3 €
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 font-weight-light">
                             Rhizomes/Africa2020
                         </div>
-                        <div class="col-3">
+                        <div class="col-3 font-weight-light">
                             1
                         </div>
-                        <div class="col-3">
+                        <div class="col-3 font-weight-light">
                             5 €
                         </div>
                     </div>
                     <div class="row mx-0 justify-content-end p-3">
                         <div class="col p-0">
                             <div class="row">
-                                <div class="col-3 text-right ml-auto">Total</div>
-                                <div class="col-3 text-right">8 €</div>
+                                <div class="col-3 text-right ml-auto font-weight-light">Total</div>
+                                <div class="col-3 text-right font-weight-light">8 €</div>
                             </div>
                             <div class="row">
-                                <div class="col-3 text-right ml-auto">TVA</div>
-                                <div class="col-3 text-right">0.80 €</div>
+                                <div class="col-3 text-right ml-auto font-weight-light">TVA</div>
+                                <div class="col-3 text-right font-weight-light">0.80 €</div>
                             </div>
                             <div class="row">
                                 <div class="col-3 text-right ml-auto font-weight-bold">Total TTC</div>
-                                <div class="col-3 text-right">8.80 €</div>
+                                <div class="col-3 text-right font-weight-light">8.80 €</div>
                             </div>
                         </div>
                     </div>
                     <div class="row m-0">
-                        <div class="col-6 pl-0 pr-2 d-flex"><button class="primary-button w-100"><a href="{{ path('ticket_pay') }}">Payer en ligne</a></button></div>
-                        <div class="col-6 pr-0 pl-2 d-flex"><button class="secondary-button w-100"><a href="{{ path('ticket_pay') }}">Payer sur place</a></button></div>
+                        <div class="col-6 pl-0 pr-2 d-flex"><button class="primary-button w-100 ticket-button"><a href="{{ path('ticket_pay') }}">Payer en ligne</a></button></div>
+                        <div class="col-6 pr-0 pl-2 d-flex"><button class="secondary-button w-100 ticket-button"><a href="{{ path('ticket_pay') }}">Payer sur place</a></button></div>
                     </div>
                 </div>
             </div>

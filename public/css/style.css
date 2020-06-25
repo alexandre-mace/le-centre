@@ -1,11 +1,22 @@
 html * {cursor:none!important}
 
+body {
+    font-family: 'Metropolis', sans-serif;
+}
+
 header {
     background-color: #1D1D1B;
     color: white;
     z-index: 1;
     top: 0;
     padding: 2rem 40px;
+}
+
+.header__item {
+    font-size: 14px;
+    font-family: 'Metropolis', sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 .pre-header {
     background-image: url('/images/header-stickymenu-bg.png');
@@ -28,6 +39,26 @@ header {
 .planning {
     background-color: #1D1D1B;
     color: white;
+}
+.planning-year {
+    font-size: 40px;
+    font-weight: 500;
+}
+.planning-expo-title {
+    font-weight: 900;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.planning-expo-description {
+    font-size: 14px;
+    font-family: 'Metropolis Extra', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+.planning-expo-text {
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 10px;
 }
 .secondary-square {
     display: block;
@@ -69,12 +100,14 @@ header * {
     color: black;
 }
 .section-title {
-    font-weight: bold;
-    font-size: 1.3rem;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 36px;
 }
 .section-subtitle {
-    font-weight: bold;
-    font-size: 1.1rem;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
     margin-bottom: 15px;
 }
 .home-main {
@@ -85,6 +118,11 @@ header * {
     height: calc(100vh - 200px);
     padding-left: 40px;
     padding-right: 40px;
+}
+.expo-title {
+    font-size: 36px;
+    font-weight: 900;
+    font-style: normal;
 }
 .current-event {
     background-color: #1D1D1B;
@@ -101,6 +139,8 @@ header * {
     width: auto;
     display: inline-block;
     padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 900;
 }
 .current-event-square {
     padding: 30px 10px;
@@ -126,6 +166,13 @@ header * {
     justify-content: center;
     align-items: center;
     border: 10px solid white;
+    font-family: 'Courier', arial, sans-serif;
+    font-size: 14px;
+}
+.current-event--main-name {
+    font-family: 'Courier', arial, sans-serif;
+    font-size: 14px;
+    text-decoration: underline;
 }
 .coming-content {
     background-image: url("https://via.placeholder.com/500x240/9D9D9D/FFFFFF");
@@ -136,6 +183,16 @@ header * {
 .coming {
     background-color: #1D1D1B;
     color: white;
+}
+.expo__title {
+    font-size: 18px;
+    font-weight: normal;
+}
+.expo__subtitle {
+    font-family: 'Metropolis';
+    font-weight: 300;
+    font-style: italic;
+    font-size: 14px;
 }
 .blog {
     color: white;
@@ -178,24 +235,45 @@ a {
     color: #1D1D1B;
     text-transform: uppercase;
     opacity: 1;
+    font-size: 18px;
+    font-weight: 900;
+    font-style: normal;
+}
+.instagram-first-photo-description {
+    font-style: italic;
+    font-size: 14px;
+    font-family: 'Metropolis Extra', sans-serif;
+    font-weight: 200;
 }
 .instagram-text-block-title {
     text-align: right;
     letter-spacing: 0px;
     color: #1D1D1B;
-    text-transform: uppercase;
     opacity: 1;
+    font-family: 'Metropolis Extra', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 18px;
 }
 .instagram-text-block-quote {
     text-align: right;
     letter-spacing: 0px;
     color: #1D1D1B;
     opacity: 1;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 18px;
+    margin-top: 10px;
 }
 .instagram-text-block-subtitle {
     text-align: right;
-    color: #1D1D1B;
+    color: #fff;
     opacity: 1;
+    background-color: #000;
+    font-family: 'Metropolis Extra', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    padding: 2px;
 }
 a:hover {
     color: inherit;
@@ -319,12 +397,45 @@ a:hover {
 .practical-info-text-block-up {
     margin-top: -40px;
 }
+.practical-info-title {
+    font-size: 42px;
+    font-weight: 900;
+}
+.practical-info-hours {
+    font-family: 'Courier', arial, sans-serif;
+    font-size: 12px;
+}
+.practical-info-prices {
+    font-family: 'Courier', arial, sans-serif;
+    font-size: 14px;
+}
+.practical-info-legals {
+    font-style: italic;
+    font-size: 12px;
+    font-family: 'Metropolis Extra', sans-serif;
+    font-weight: 200;
+
+}
 .access-plan {
     background-color: #262626;
     color: white;
 }
 .access-plan-plan {
     height: 602px;
+}
+.access-plan-title {
+    font-size: 42px;
+    font-weight: 900;
+}
+.access-plan-drive {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.access-plan-text {
+    font-size: 14px;
+    font-family: 'Metropolis Extra', sans-serif;
+    font-weight: 200;
 }
 .ticket {
     background-color: #262626;
@@ -335,6 +446,29 @@ a:hover {
     border-top: 10px solid white;
     border-bottom: 10px solid white;
     border-right: 10px solid white;
+}
+.ticket-title {
+    font-weight: 900;
+    font-size: 42px;
+}
+.ticket-subtitle {
+    font-size: 13px;
+}
+.ticket-reserve {
+    font-size: 19px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.ticket-legals {
+    font-size: 14px;
+    font-weight: 500;
+}
+.ticket-button {
+    font-weight: 700;
+    font-size: 14px;
+}
+.ticket-basket {
+    font-size: 19px;
 }
 .primary-button {
     padding: 13px 20px;
@@ -454,6 +588,8 @@ body {
     width: auto;
     overflow: visible;
     transition: opacity ease-in 0.3s;
+    font-family: 'Courier', arial, sans-serif;
+    font-size: 14px;
 }
 .opacity-1 {
     opacity: 1;

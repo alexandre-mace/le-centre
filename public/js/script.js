@@ -36,6 +36,7 @@ let cursorOuterOriginalState = {
 };
 const buttons = document.querySelectorAll(".square-action");
 const links = document.querySelectorAll("a");
+// console.log(links)
 
 links.forEach((link) => {
     link.addEventListener("pointerenter", handleLinkMouseEnter);
