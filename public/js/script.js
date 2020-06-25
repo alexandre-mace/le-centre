@@ -97,7 +97,7 @@ function handleMouseEnter(e) {
             borderRadius: 0,
             borderColor: "white",
             mixBlendMode: "normal",
-            scale: 6
+            scale: 1
         });
     } else {
     gsap.to(cursorOuter, 0.2, {
@@ -195,16 +195,16 @@ $(document).ready(function () {
     localStorage.setItem('bsm-lecentre-preloader', 'true');
 
     // ripple
-    // $('.water').ripples({
-    //     resolution: 256,
-    //     dropRadius: 20,
-    //     perturbance: 0.009,
-    // });
-    //
-    // $('.home-main').ripples({
-    //     resolution: 256,
-    //     dropRadius: 20,
-    //     perturbance: 0.002,
-    // });
+    $('.water').ripples({
+        resolution: 256,
+        dropRadius: 20,
+        perturbance: 0.002,
+    });
+
+    $('.home-main').ripples({
+        resolution: 256,
+        dropRadius: 20,
+        perturbance: 0.002,
+    });
 });
 

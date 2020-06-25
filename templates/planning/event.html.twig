@@ -1,11 +1,11 @@
 {% if odd == true %}
     <div class="row position-relative planning-row align-items-center my-5">
-        <div class="col-4 offset-1 d-flex flex-column planning-over text-right move">
+        <a href="{{ path('exposition', {id: exposition.id}) }}" class="col-4 offset-1 d-flex flex-column planning-over text-right move">
             <div>{{ exposition.title }}</div>
             <div>{{ exposition.shortDescription }}</div>
             <div>Initiée par l'Institut Français, cette exposition fera l'état des lieux de la scène artistique africaine. Elle accompagne les chroniques de la Base Sous-Marine, d'hier à aujourd'hui.</div>
-        </div>
-        <div class="planning-first-photo-wrapper">
+        </a>
+        <a href="{{ path('exposition', {id: exposition.id}) }}" class="planning-first-photo-wrapper">
             <div class="planning-first-photo" style="background-image: url(/uploads/images/{{ exposition.tinyImage }})">
                 <div class="col-6 h-100 ml-auto p-0 d-flex flex-column justify-content-between align-items-start pt-0 pr-0">
                     <div>
@@ -18,17 +18,17 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-4 p-0 planning-over offset-2">
+        </a>
+        <a href="{{ path('exposition', {id: exposition.id}) }}" class="col-4 p-0 planning-over offset-2">
             <div class="planning-second-photo move" style="background-image: url(/uploads/images/{{ exposition.artistPhoto }})"></div>
-        </div>
+        </a>
     </div>
 {% else %}
     <div class="row position-relative planning-row align-items-center my-5">
-        <div class="col-4 offset-1 planning-over">
+        <a href="{{ path('exposition', {id: exposition.id}) }}" class="col-4 offset-1 planning-over">
             <div class="planning-second-photo move" style="background-image: url(/uploads/images/{{ exposition.artistPhoto }})"></div>
-        </div>
-        <div class="planning-first-photo-wrapper">
+        </a>
+        <a href="{{ path('exposition', {id: exposition.id}) }}" class="planning-first-photo-wrapper">
             <div class="planning-first-photo" style="background-image: url(/uploads/images/{{ exposition.tinyImage }})">
                 <div class="col-6 h-100 mr-auto p-0 d-flex flex-column justify-content-between align-items-end pt-0 pr-0">
                     <div>
@@ -41,11 +41,11 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-4 p-0 planning-over offset-2 text-left move">
+        </a>
+        <a href="{{ path('exposition', {id: exposition.id}) }}" class="col-4 p-0 planning-over offset-2 text-left move">
             <div>{{ exposition.title }}</div>
             <div>{{ exposition.shortDescription }}</div>
             <div>Initiée par l'Institut Français, cette exposition fera l'état des lieux de la scène artistique africaine. Elle accompagne les chroniques de la Base Sous-Marine, d'hier à aujourd'hui.</div>
-        </div>
+        </a>
     </div>
 {% endif %}

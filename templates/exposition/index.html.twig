@@ -35,21 +35,24 @@
         <div class="container mt-4 mb-5">
             <div class="row">
                 <div class="col-9">
-                    <div class="col-8 p-0">La Saison culturelle - Bienvenue 2021</div>
-                    <div class="col-6 exposition-description my-4">Exposition collective d'artistes</div>
+                    <div class="col-8 p-0">{{ exposition.title }}</div>
+                    <div class="col-6 exposition-description my-4">{{ exposition.thematique }}</div>
                     <div class="font-weight-bold mb-3 font-italic">{{ exposition.shortDescription }}</div>
-                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</div>
+                    <div>{{ exposition.longDescription }}</div>
                 </div>
                 <div class="col-auto ml-auto pr-2">
-                    <div class="exposition-small-image mt-2" style="background-image: url(/uploads/images/{{ exposition.artistPhoto }})">
-                        <div class="d-flex flex-column align-items-center mr-5 py-5 exposition-small-image-description">
-                            <div class="ternary-square exposition-ternary-square"></div>
-                            <div>Ayham Khatibi</div>
-                        </div>
+                    <div class="exposition-small-image mt-2 square-action" style="background-image: url(/uploads/images/{{ exposition.artistPhoto }})">
                     </div>
-                    <div class="exposition-small-image mt-2"  style="background-size:cover; background-image: url(/images/expobienvenue-artiste2.png)"></div>
-                    <div class="exposition-small-image mt-2"  style="background-size:cover; background-image: url(/images/expobienvenue-artiste3.png)"></div>
-                    <div class="exposition-small-image mt-2"  style="background-size:cover; background-image: url(/images/expobienvenue-artiste4.png)"></div>
+                    <div class="hidden-text name-text">Ayham Khatibi</div>
+                    <div class="exposition-small-image mt-2 square-action"  style="background-size:cover; background-image: url(/images/expobienvenue-artiste2.png)">
+                    </div>
+                    <div class="hidden-text name-text">Engénice Delatour</div>
+                    <div class="exposition-small-image mt-2 square-action"  style="background-size:cover; background-image: url(/images/expobienvenue-artiste3.png)">
+                    </div>
+                    <div class="hidden-text name-text">Julie Lallande</div>
+                    <div class="exposition-small-image mt-2 square-action"  style="background-size:cover; background-image: url(/images/expobienvenue-artiste4.png)">
+                    </div>
+                    <div class="hidden-text name-text">Florent Carton</div>
                 </div>
             </div>
         </div>
