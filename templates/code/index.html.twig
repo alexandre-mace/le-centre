@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CodeController!{% endblock %}
+
+{% block body %}
+    <div class="practical-info pt-5" style="background-image: url(/images/infospratiques-bg-page.png)">
+        <div class="container py-5 mt-3">
+            <div class="row">
+                <div class="col-3 d-none d-sm-block offset-4 mb-5 text-center">
+                    <a href="{{ path('code') }}" class="square-action secondary-square mx-auto position-relative arrow-square"><div class="arrow-wrapper"><i class="icono-arrow1-left"></i></div></a>
+                    <div class="hidden-text mt-0 pt-3 square-action-text square-with-arrow"><div class="">Voir la video</div></div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col text-center">
+                    <div class="section-title">Avez-vous trouvé la clé ?</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <input class="code-input" type="text" placeholder="XXXX-XXXX-XXX-XXX">
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col text-center left-places">
+                    <div>Il ne reste plus que 8 places à gagner</div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col text-center">
+                    <div class="well-played"><span class="font-weight-900">Bien joué ;)</span><br> <div class="underline">Obtenez vos places gratuites</div></div>
+                </div>
+            </div>
+            <div class="social pt-5 mt-5 background-transparent">
+                <div class="container pt-4">
+                    <div class="row">
+                        <div class="col text-center mb-3">
+                            <div class="section-title">NOUS SUIVRE</div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-auto text-center">
+                            <div class="social-image" style="background-image: url(/images/footer-icon-facebook.png)"></div>
+                        </div>
+                        <div class="col-auto text-center">
+                            <div class="social-image" style="background-image: url(/images/footer-icon-instagram.png)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block social %}
+{% endblock %}

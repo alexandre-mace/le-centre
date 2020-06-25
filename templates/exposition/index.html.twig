@@ -20,13 +20,13 @@
                             <div class="current-event--main-square exposition--main-square text-center">
                                 {{ exposition.startAt|date('d') }} <br>
                                 {{ exposition.startAt|date('M', "Europe/Paris") }} <br>
-                                - <br>
+                                -<br>
                                 {{ exposition.endAt|date('d') }} <br>
                                 {{ exposition.endAt|date('M', "Europe/Paris") }}
                             </div>
                         </div>
                         <div class="col-auto pt-3">
-                            <div class="exposition-small-image" style="background-image: url(/uploads/images/{{ exposition.artistPhoto }})"></div>
+                            <div class="exposition-small-image" style="background-image: url(/images/expobienvenue-photo3.png)"></div>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
         <div class="container mt-4 mb-5">
             <div class="row">
                 <div class="col-9">
-                    <div class="col-8 p-0">{{ exposition.title }}</div>
+                    <div class="col-8 p-0 show-expo-title">{{ exposition.title }}</div>
                     <div class="col-6 exposition-description my-4">{{ exposition.thematique }}</div>
                     <div class="font-weight-bold mb-3 font-italic">{{ exposition.shortDescription }}</div>
                     <div>{{ exposition.longDescription }}</div>

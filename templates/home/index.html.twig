@@ -17,7 +17,7 @@
         </div>
         <div class="row">
             <div class="col-3 d-none d-sm-block offset-8 mb-5 text-center">
-                <a href="" class="square-action secondary-square mx-auto position-relative arrow-square"><div class="arrow-wrapper"><i class="icono-arrow1-left"></i></div></a>
+                <a href="{{ path('code') }}" class="square-action secondary-square mx-auto position-relative arrow-square"><div class="arrow-wrapper"><i class="icono-arrow1-left"></i></div></a>
                 <div class="hidden-text mt-0 pt-3 square-action-text square-with-arrow"><div class="">Entrez la clé</div></div>
             </div>
         </div>
@@ -116,11 +116,10 @@
                     <div class="ml-auto square-action pointer-square current-event--main-square black-big-dot"></div>
                     <div class="instagram-text-block hidden-text">
                         <div class="instagram-text-block-title">Au coeur de l’exposition</div>
-                        <div class="instagram-text-block-quote mt-1 mb-2">Votre Tête-à-tête avec les oeuvre d’art</div>
-                        <div class="instagram-text-block-subtitle">#<b>between</b>theexperience sur instagram</div>
+                        <div class="instagram-text-block-quote mt-1 mb-2">Votre Tete-à-tete avec les oeuvres d’art</div>
+                        <div class="instagram-text-block-subtitle">#<span class="font-weight-900">between</span>theexperience sur instagram</div>
                     </div>
                 </div>
-                <div class="col-3 pr-0 py-2 pl-0">
                     <div class="row m-0 d-flex flex-column align-items-end">
                         <div class="col-6 mb-3 p-0"><div class="instagram-second-photo water" style="background-image: url(/uploads/images/{{ instagramGallery.secondImage }})"></div></div>
                         <div class="col p-0"><div class="instagram-third-photo water" style="background-image: url(/uploads/images/{{ instagramGallery.thirdImage }})"></div></div>
