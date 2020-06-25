@@ -119,6 +119,8 @@ function handleMouseLeave(e) {
     gsap.to(cursorOuter, 0.2, {
         width: cursorOuterOriginalState.width,
         height: cursorOuterOriginalState.width,
+        borderColor: "white",
+        mixBlendMode: "difference",
         scale: 1
     });
 }
