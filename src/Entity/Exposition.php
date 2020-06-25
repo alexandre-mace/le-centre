@@ -142,6 +142,28 @@ class Exposition
      */
     private $planningImage2File;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $homeImage1;
+
+    /**
+     * @Vich\UploadableField(mapping="images", fileNameProperty="homeImage1")
+     * @var File
+     */
+    private $homeImage1File;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $homeImage2;
+
+    /**
+     * @Vich\UploadableField(mapping="images", fileNameProperty="homeImage2")
+     * @var File
+     */
+    private $homeImage2File;
+
     public function __construct()
     {
         $this->currentExpositionHomepages = new ArrayCollection();
@@ -505,6 +527,72 @@ class Exposition
     public function setPlanningImage2File($image = null)
     {
         $this->planningImage2File = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
+    }
+
+    public function getHomeImage1()
+    {
+        return $this->homeImage1;
+    }
+
+    public function setHomeImage1($homeImage1): self
+    {
+        $this->homeImage1 = $homeImage1;
+
+        return $this;
+    }
+
+    public function getHomeImage2()
+    {
+        return $this->homeImage2;
+    }
+
+    public function setHomeImage2($homeImage2): self
+    {
+        $this->homeImage2 = $homeImage2;
+
+        return $this;
+    }
+
+    /**
+     * @return File
+     */
+    public function getHomeImage1File(): File
+    {
+        return $this->homeImage1File;
+    }
+
+    public function setHomeImage1File($image = null)
+    {
+        $this->homeImage1File = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
+    }
+
+    /**
+     * @return File
+     */
+    public function getHomeImage2File(): File
+    {
+        return $this->homeImage2File;
+    }
+
+    public function setHomeImage2File($image = null)
+    {
+        $this->homeImage2File = $image;
 
         // VERY IMPORTANT:
         // It is required that at least one field changes if you are using Doctrine,
