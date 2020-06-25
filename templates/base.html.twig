@@ -13,34 +13,63 @@
     </head>
     <body>
         <div class="app-wrapper {% if app.request.get('_route') == 'home' %}transparent{% endif %}">
-            <div class="container-fluid pre-header">
+            <div class="container-fluid pre-header d-none d-lg-block">
                 <div class="row d-flex h-100 justify-content-center align-items-center">
                     <div class="col-auto h-100 d-flex align-items-center font-italic">
                         Ré-ouverture de la Base Sous-Marine en 2021 !
                     </div>
                 </div>
             </div>
-            <header class="header">
-                <div class="container-fluid">
+            <div class="d-block d-lg-none mobile-sticky-header">
+                <div class="container-fluid pre-header pre-header-mobile">
+                    <div class="row d-flex h-100 justify-content-center align-items-center">
+                        <div class="col-auto h-100 d-flex align-items-center font-italic">
+                            Ré-ouverture de la Base Sous-Marine en 2021 !
+                        </div>
+                    </div>
+                </div>
+
+                <h1><a href="{{ path('home') }}"><img src="{{ asset('images/LOGO-CENTRE.png') }}" alt=""></a></h1>
+
+                <input id="burger" type="checkbox" />
+
+                <label for="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <nav>
+                    <ul>
+                        <li><a href="{{ path('planning') }}">Expositions</a></li>
+                        <li><a href="{{ path('practical_info') }}">Infos pratiques</a></li>
+                        <li><a href="{{ path('access_plan') }}">Venir sur le lieu</a></li>
+                        <li><a href="{{ path('ticket') }}">Billetterie</a></li>
+                        <li class="d-flex justify-content-center"><div class="d-flex"><div class="underline-text">FR</div> <div class="ml-1">/ EN</div></div></li>
+                    </ul>
+                </nav>
+            </div>
+            <header class="header px-0 d-none d-lg-block">
+                <div class="container-fluid d-none d-lg-block">
                     <div class="row align-items-center">
                         <div class="col-auto mr-auto">
                             <div><a href="{{ path('home') }}"><img src="{{ asset('images/LOGO-CENTRE.png') }}" alt=""></a></div>
                         </div>
                         <div class="col-auto">
                             <div class="row align-items-center">
-                                <div class="mx-3 col-auto">
-                                    <div><a href="{{ path('planning') }}">Expositions</a></div>
+                                <div class="mx-0 mx-lg-2 mx-xl-3 col-auto">
+                                    <div><a class="{% if app.request.get('_route') == 'planning' %}underline{% endif %}" href="{{ path('planning') }}">Expositions</a></div>
                                 </div>
-                                <div class="mx-3 col-auto">
-                                    <div><a href="{{ path('practical_info') }}">Infos pratiques</a></div>
+                                <div class="mx-0 mx-lg-2 mx-xl-3 col-auto">
+                                    <div><a class="{% if app.request.get('_route') == 'practical_info' %}underline{% endif %}" href="{{ path('practical_info') }}">Infos pratiques</a></div>
                                 </div>
-                                <div class="mx-3 col-auto">
-                                    <div><a href="{{ path('access_plan') }}">Venir sur le lieu</a></div>
+                                <div class="mx-0 mx-lg-2 mx-xl-3 col-auto">
+                                    <div><a class="{% if app.request.get('_route') == 'access_plan' %}underline{% endif %}" href="{{ path('access_plan') }}">Venir sur le lieu</a></div>
                                 </div>
-                                <div class="mx-3 col-auto">
-                                    <div><a class="header-ticket-link" href="{{ path('ticket') }}">Billetterie</a></div>
+                                <div class="mx-0 mx-lg-2 mx-xl-3 p-0 mr-0 col-auto">
+                                    <div><a class="header-ticket-link {% if app.request.get('_route') in ['ticket', 'ticket_pay', 'ticket_confirmation'] %}underline{% endif %}" href="{{ path('ticket') }}">Billetterie</a></div>
                                 </div>
-                                <div class="mx-3 col d-flex">
+                                <div class="mx-0 mx-lg-2 mx-xl-3 col d-flex">
                                     <div class="underline-text">FR</div> <div class="ml-1">/ EN</div>
                                 </div>
                             </div>

@@ -5,30 +5,32 @@
 {% block body %}
     <div class="home-main">
     <div class="container-fluid pt-5">
-        <div class="row mb-4 mt-5">
-            <div class="col-3 pt-5 offset-4 move text-center">
-                <div class="square-action secondary-square mx-auto"></div>
-                <div class="hidden-text">Trois expositions temporaires Une monographie</div>
-            </div>
-        </div>
         <div class="row">
             <div class="col mb-5 pb-2">
             </div>
         </div>
-        <div class="row">
-            <div class="col mb-5">
+        <div class="row mb-4 mt-5">
+            <div class="col-3 d-none d-sm-block pt-5 block-down offset-3 move text-center">
+                <div class="square-action secondary-square mx-auto"></div>
+                <div class="hidden-text">Trois expositions temporaires <br> Une monographie</div>
             </div>
         </div>
-        <div class="row mt-5 pt-5 pb-3">
-            <div class="col-3 offset-8 text-center move">
+        <div class="row">
+            <div class="col-3 d-none d-sm-block offset-8 mb-3 text-center move">
+                <a href="" class="square-action secondary-square mx-auto"></a>
+                <div class="hidden-text mt-0 pt-3 square-action-text"><div class="">Gagner deux places <br> gratuites</div> arrow-right</div>
+            </div>
+        </div>
+        <div class="row pb-3">
+            <div class="col-3 d-none d-sm-block offset-7 text-center move">
                 <div class="square-action secondary-square mx-auto"></div>
-                <div class="hidden-text">Une initiative de la mairie de Bordeaux</div>
+                <div class="hidden-text">Une initiative <br> de la mairie de Bordeaux</div>
             </div>
         </div>
         <div class="row mt-2">
-            <div class="col-3 offset-2 move">
+            <div class="col-3 d-none d-sm-block offset-1 move">
                 <div class="square-action secondary-square mx-auto current-event--main-square tiny-square"></div>
-                <div class="hidden-text">{{ homepage.openInfo }}</div>
+                <div class="hidden-text">Ouvert tous les jours <br> de {{ homepage.openInfo }}</div>
             </div>
         </div>
     </div>
@@ -38,7 +40,7 @@
             <div class="row">
                 <div class="col-auto">
                     <div class="section-title">En ce moment</div>
-                    <div class="section-subtitle">Quelque chose se prépare</div>
+                    <div class="section-subtitle">Quelque chose se dévoile...</div>
                 </div>
             </div>
             <div class="row">
@@ -71,12 +73,11 @@
         <div class="container  py-5">
             <div class="row">
                 <div class="col-auto">
-                    <div class="section-title">A venir</div>
-                    <div class="section-subtitle">Bientôt au coeur du centre</div>
+                    <div class="section-title">Monographies</div>
                 </div>
             </div>
             <div class="row">
-                <div class="col text-center">
+                <div class="col-12 col-md-6 text-center">
                     <div class="coming-content water row m-0 justify-content-between" style="background-image: url(/uploads/images/{{ homepage.artistExposition.bannerImage }})">
                         <div class="col-auto d-flex flex-column justify-content-end pb-4 pl-4 text-left">
                             <div class="font-weight-bold">{{ homepage.artistExposition.title }}</div>
@@ -88,7 +89,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col text-center">
+                <div class="col-12 col-md-6 text-center">
                     <div class="coming-content water row m-0 justify-content-between" style="background-image: url(/uploads/images/{{ homepage.artistExposition.bannerImage }})">
                         <div class="col-auto d-flex flex-column justify-content-end pb-4 pl-4 text-left">
                             <div class="font-weight-bold">{{ homepage.artistExposition.title }}</div>
@@ -104,14 +105,14 @@
         </div>
     </div>
     <div class="instagram-gallery pb-2">
-        <div class="container  py-5">
+        <div class="container py-5">
             <div class="row">
                 <div class="col p-2">
                     <div class="instagram-fourth-photo ml-auto water" style="background-image: url(/uploads/images/{{ instagramGallery.secondImage }})"></div>
                     <div class="instagram-text-block move">
-                        <div class="instagram-text-block-title">Le Concept du mois</div>
-                        <div class="instagram-text-block-quote">« Speed-painting »</div>
-                        <div class="instagram-text-block-subtitle">Tête-à-tête avec l'oeuvre d'art</div>
+                        <div class="instagram-text-block-title">Au coeur de l’exposition</div>
+                        <div class="instagram-text-block-quote">Votre Tête-à-tête avec les oeuvre d’art</div>
+                        <div class="instagram-text-block-subtitle">#betweentheexperience sur instagram</div>
                     </div>
                 </div>
                 <div class="col-auto pr-0 pl-0">
@@ -123,12 +124,12 @@
                         <div class="col p-0"><div class="instagram-third-photo water" style="background-image: url(/uploads/images/{{ instagramGallery.thirdImage }})"></div></div>
                     </div>
                 </div>
-                <div class="col px-3 pb-3 pt-2">
+                <div class="col-12 col-md-auto px-3 pb-3 pt-2">
                     <div class="d-flex flex-column">
                         <div class="instagram-first-photo p-3 d-flex flex-column justify-content-end water" style="background-image: url(/uploads/images/{{ instagramGallery.firstImage }})">
                             <div class="color-white text-right">{{ instagramGallery.firstDescription }}</div>
                         </div>
-                        <div class="mt-3 instagram-first-photo-title">sélection de vos photos instagram</div>
+                        <div class="mt-3 instagram-first-photo-title">sélection de vos photos</div>
                     </div>
                 </div>
             </div>
