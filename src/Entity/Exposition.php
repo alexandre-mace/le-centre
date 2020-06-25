@@ -131,6 +131,17 @@ class Exposition
      */
     private $updatedAt;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $planningImage2;
+
+    /**
+     * @Vich\UploadableField(mapping="images", fileNameProperty="planningImage2")
+     * @var File
+     */
+    private $planningImage2File;
+
     public function __construct()
     {
         $this->currentExpositionHomepages = new ArrayCollection();
@@ -469,5 +480,38 @@ class Exposition
         }
 
         return $this;
+    }
+
+    public function getPlanningImage2()
+    {
+        return $this->planningImage2;
+    }
+
+    public function setPlanningImage2($planningImage2): self
+    {
+        $this->planningImage2 = $planningImage2;
+
+        return $this;
+    }
+
+    /**
+     * @return File
+     */
+    public function getPlanningImage2File(): File
+    {
+        return $this->planningImage2File;
+    }
+
+    public function setPlanningImage2File($image = null)
+    {
+        $this->planningImage2File = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
     }
 }
