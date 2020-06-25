@@ -73,17 +73,23 @@ class InstagramGallery
      */
     private $longDescription;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     * @var \DateTime
+     */
+    private $updatedAt;
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getFirstImage(): ?string
+    public function getFirstImage()
     {
         return $this->firstImage;
     }
 
-    public function setFirstImage(string $firstImage): self
+    public function setFirstImage($firstImage): self
     {
         $this->firstImage = $firstImage;
 
@@ -102,12 +108,12 @@ class InstagramGallery
         return $this;
     }
 
-    public function getSecondImage(): ?string
+    public function getSecondImage()
     {
         return $this->secondImage;
     }
 
-    public function setSecondImage(string $secondImage): self
+    public function setSecondImage($secondImage): self
     {
         $this->secondImage = $secondImage;
 
@@ -126,12 +132,12 @@ class InstagramGallery
         return $this;
     }
 
-    public function getThirdImage(): ?string
+    public function getThirdImage()
     {
         return $this->thirdImage;
     }
 
-    public function setThirdImage(string $thirdImage): self
+    public function setThirdImage($thirdImage): self
     {
         $this->thirdImage = $thirdImage;
 
@@ -170,12 +176,17 @@ class InstagramGallery
         return $this->firstImageFile;
     }
 
-    /**
-     * @param File $firstImageFile
-     */
-    public function setFirstImageFile($firstImageFile)
+    public function setFirstImageFile($image = null)
     {
-        $this->firstImageFile = $firstImageFile;
+        $this->firstImageFile = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
     }
 
     /**
@@ -186,12 +197,17 @@ class InstagramGallery
         return $this->secondImageFile;
     }
 
-    /**
-     * @param File $secondImageFile
-     */
-    public function setSecondImageFile($secondImageFile)
+    public function setSecondImageFile($image = null)
     {
-        $this->secondImageFile = $secondImageFile;
+        $this->secondImageFile = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
     }
 
     /**
@@ -202,11 +218,16 @@ class InstagramGallery
         return $this->thirdImageFile;
     }
 
-    /**
-     * @param File $thirdImageFile
-     */
-    public function setThirdImageFile($thirdImageFile)
+    public function setThirdImageFile($image = null)
     {
-        $this->thirdImageFile = $thirdImageFile;
+        $this->thirdImageFile = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
     }
 }

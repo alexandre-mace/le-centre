@@ -51,6 +51,12 @@ class HomePage
      */
     private $artistExposition2;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     * @var \DateTime
+     */
+    private $updatedAt;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,12 +74,12 @@ class HomePage
         return $this;
     }
 
-    public function getSecondSectionImage(): ?string
+    public function getSecondSectionImage()
     {
         return $this->secondSectionImage;
     }
 
-    public function setSecondSectionImage(string $secondSectionImage): self
+    public function setSecondSectionImage($secondSectionImage): self
     {
         $this->secondSectionImage = $secondSectionImage;
 
@@ -88,12 +94,17 @@ class HomePage
         return $this->secondSectionImageFile;
     }
 
-    /**
-     * @param File $secondSectionImageFile
-     */
-    public function setSecondSectionImageFile($secondSectionImageFile)
+    public function setSecondSectionImageFile($image = null)
     {
-        $this->secondSectionImageFile = $secondSectionImageFile;
+        $this->secondSectionImageFile = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
     }
 
     public function getCurrentExposition(): ?Exposition

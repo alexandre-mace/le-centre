@@ -125,6 +125,12 @@ class Exposition
      */
     private $homePagesArtistExposition2;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     * @var \DateTime
+     */
+    private $updatedAt;
+
     public function __construct()
     {
         $this->currentExpositionHomepages = new ArrayCollection();
@@ -137,24 +143,24 @@ class Exposition
         return $this->id;
     }
 
-    public function getBannerImage(): ?string
+    public function getBannerImage()
     {
         return $this->bannerImage;
     }
 
-    public function setBannerImage(string $bannerImage): self
+    public function setBannerImage($bannerImage): self
     {
         $this->bannerImage = $bannerImage;
 
         return $this;
     }
 
-    public function getTinyImage(): ?string
+    public function getTinyImage()
     {
         return $this->tinyImage;
     }
 
-    public function setTinyImage(string $tinyImage): self
+    public function setTinyImage($tinyImage): self
     {
         $this->tinyImage = $tinyImage;
 
@@ -257,12 +263,12 @@ class Exposition
         return $this;
     }
 
-    public function getArtistPhoto(): ?string
+    public function getArtistPhoto()
     {
         return $this->artistPhoto;
     }
 
-    public function setArtistPhoto(string $artistPhoto): self
+    public function setArtistPhoto($artistPhoto): self
     {
         $this->artistPhoto = $artistPhoto;
 
@@ -313,12 +319,17 @@ class Exposition
         return $this->bannerImageFile;
     }
 
-    /**
-     * @param File $bannerImageFile
-     */
-    public function setBannerImageFile($bannerImageFile)
+    public function setBannerImageFile($image = null)
     {
-        $this->bannerImageFile = $bannerImageFile;
+        $this->bannerImageFile = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
     }
 
     /**
@@ -329,14 +340,18 @@ class Exposition
         return $this->tinyImageFile;
     }
 
-    /**
-     * @param File $tinyImageFile
-     */
-    public function setTinyImageFile($tinyImageFile)
+    public function setTinyImageFile($image = null)
     {
-        $this->tinyImageFile = $tinyImageFile;
-    }
+        $this->tinyImageFile = $image;
 
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
+    }
     /**
      * @return File
      */
@@ -345,12 +360,17 @@ class Exposition
         return $this->artistPhotoFile;
     }
 
-    /**
-     * @param File $artistPhotoFile
-     */
-    public function setArtistPhotoFile($artistPhotoFile)
+    public function setArtistPhotoFile($image = null)
     {
-        $this->artistPhotoFile = $artistPhotoFile;
+        $this->artistPhotoFile = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
     }
 
     /**

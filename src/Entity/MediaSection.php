@@ -36,17 +36,23 @@ class MediaSection
      */
     private $title;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     * @var \DateTime
+     */
+    private $updatedAt;
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getImage(): ?string
+    public function getImage()
     {
         return $this->image;
     }
 
-    public function setImage(string $image): self
+    public function setImage($image): self
     {
         $this->image = $image;
 
@@ -61,12 +67,17 @@ class MediaSection
         return $this->imageFile;
     }
 
-    /**
-     * @param File $imageFile
-     */
-    public function setImageFile($imageFile)
+    public function setImageFile($image = null)
     {
-        $this->imageFile = $imageFile;
+        $this->imageFile = $image;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($image) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
     }
 
     public function getTitle(): ?string
