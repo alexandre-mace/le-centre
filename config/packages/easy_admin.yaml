@@ -28,6 +28,9 @@ easy_admin:
           - { property: 'artistPortrait', label: "Portrait de l'artiste" }
           - { property: 'artistPhoto', type: 'image', base_path: '%app.path.images%', label: "Photo de l'artiste" }
           - { property: 'planningImage2', type: 'image', base_path: '%app.path.images%', label: "Photo planning 2" }
+          - { property: 'homeImage1', type: 'image', base_path: '%app.path.images%', label: "Image home 1" }
+          - { property: 'homeImage2', type: 'image', base_path: '%app.path.images%', label: "Image home 2" }
+          - { property: 'planningImage2', type: 'image', base_path: '%app.path.images%', label: "Photo planning 2" }
           - { property: 'firstImageDescription', label: 'Description de la première image' }
           - { property: 'secondImageDescription', label: 'Description de la seconde image' }
           - { property: 'type', label: 'Type' }
@@ -45,6 +48,8 @@ easy_admin:
           - { property: 'artistPortrait', label: "Portrait de l'artiste" }
           - { property: 'artistPhotoFile', type: 'vich_image' }
           - { property: 'planningImage2File', type: 'vich_image' }
+          - { property: 'homeImage1File', type: 'vich_image' }
+          - { property: 'homeImage2File', type: 'vich_image' }
           - { property: 'firstImageDescription', label: 'Description de la première image' }
           - { property: 'secondImageDescription', label: 'Description de la seconde image' }
           - { property: 'type', type: 'choice', type_options: {choices: ['Exposition artiste', 'Exposition collective']} }

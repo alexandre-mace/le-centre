@@ -45,11 +45,11 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <a href="{{ path('exposition', {id: homepage.currentExposition.id}) }}" class="row m-0 current-event-content water justify-content-between position-relative" style="background-image: url('/uploads/images/home-en-ce-moment.png')">
+                    <a href="{{ path('exposition', {id: homepage.currentExposition.id}) }}" class="row m-0 current-event-content water justify-content-between position-relative" style="background-image: url(/uploads/images/{{ homepage.currentExposition.homeImage1 }})">
                         <div class="col-8 d-flex flex-column justify-content-between pb-0 pl-0 position-initial">
                             <div class="p-3">
-                                <div class="current-event--main-square big-dot square-action hidden-image-container position-initial" style="background-image: url(/uploads/images/{{ homepage.currentExposition.tinyImage }}); background-size: contain">
-                                    <div class="container hidden-image" style="background-image: url(/uploads/images/{{ homepage.currentExposition.tinyImage }})"></div>
+                                <div class="current-event--main-square big-dot square-action hidden-image-container position-initial" style="background-image: url(/uploads/images/{{ homepage.currentExposition.homeImage2 }}); background-size: contain">
+                                    <div class="container hidden-image" style="background-image: url(/uploads/images/{{ homepage.currentExposition.homeImage2 }})"></div>
                                 </div>
                             </div>
                             <div>
