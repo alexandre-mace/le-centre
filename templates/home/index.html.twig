@@ -48,7 +48,7 @@
                     <a href="{{ path('exposition', {id: homepage.currentExposition.id}) }}" class="row m-0 current-event-content water justify-content-between position-relative" style="background-image: url(/uploads/images/{{ homepage.currentExposition.homeImage1 }})">
                         <div class="col-8 d-flex flex-column justify-content-between pb-0 pl-0 position-initial">
                             <div class="p-3">
-                                <div class="current-event--main-square big-dot square-action hidden-image-container position-initial" style="background-image: url(/uploads/images/{{ homepage.currentExposition.homeImage2 }}); background-size: contain">
+                                <div class="current-event--main-square big-dot square-action hidden-image-container position-initial" style="background-image: url(/uploads/images/{{ homepage.currentExposition.homeImage2 }}); background-size: cover;">
                                     <div class="container hidden-image" style="background-image: url(/uploads/images/{{ homepage.currentExposition.homeImage2 }})"></div>
                                 </div>
                             </div>
@@ -80,7 +80,7 @@
             </div>
             <div class="row">
                 <a href="{{ path('exposition', {id: homepage.currentExposition.id}) }}" class="col-12 col-md-6 text-center">
-                    <div class="coming-content water row m-0 justify-content-between" style="background-image: url(/uploads/images/{{ homepage.artistExposition.bannerImage }})">
+                    <div class="coming-content water row m-0 justify-content-between" style="background-image: url(/uploads/images/{{ homepage.artistExposition.homeImage1 }})">
                         <div class="col-6 d-flex flex-column justify-content-end pb-4 pl-4 text-left">
                             <div class="expo__title">{{ homepage.artistExposition.title }}</div>
                             <div class="expo__subtitle">{{ homepage.artistExposition.shortDescription }}</div>
@@ -92,7 +92,7 @@
                     </div>
                 </div>
                 <a href="{{ path('exposition', {id: homepage.artistExposition2.id}) }}" class="col-12 col-md-6 text-center">
-                    <div class="coming-content water row m-0 justify-content-between" style="background-image: url(/uploads/images/{{ homepage.artistExposition2.bannerImage }})">
+                    <div class="coming-content water row m-0 justify-content-between" style="background-image: url(/uploads/images/{{ homepage.artistExposition2.homeImage1 }})">
                         <div class="col-auto d-flex flex-column justify-content-end pb-4 pl-4 text-left">
                             <div class="expo__title">{{ homepage.artistExposition2.title }}</div>
                             <div class="expo__subtitle">{{ homepage.artistExposition2.shortDescription }}</div>
