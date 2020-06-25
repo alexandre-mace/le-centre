@@ -20,13 +20,13 @@
             </div>
         </a>
         <a href="{{ path('exposition', {id: exposition.id}) }}" class="col-4 p-0 planning-over offset-2">
-            <div class="planning-second-photo move" style="background-image: url(/uploads/images/{{ exposition.artistPhoto }})"></div>
+            <div class="planning-second-photo move" style="background-image: url(/uploads/images/{{ exposition.planningImage2 }})"></div>
         </a>
     </div>
 {% else %}
     <div class="row position-relative planning-row align-items-center my-5">
         <a href="{{ path('exposition', {id: exposition.id}) }}" class="col-4 offset-1 planning-over">
-            <div class="planning-second-photo move" style="background-image: url(/uploads/images/{{ exposition.artistPhoto }})"></div>
+            <div class="planning-second-photo move" style="background-image: url(/uploads/images/{{ exposition.planningImage2 }})"></div>
         </a>
         <a href="{{ path('exposition', {id: exposition.id}) }}" class="planning-first-photo-wrapper">
             <div class="planning-first-photo" style="background-image: url(/uploads/images/{{ exposition.tinyImage }})">

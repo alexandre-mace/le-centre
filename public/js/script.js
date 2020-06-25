@@ -189,6 +189,25 @@ $(document).ready(function () {
 
     }
 
+    $('.code-input').bind("enterKey",function(e){
+        console.log(e.target.value)
+        if (e.target.value === "1941-2212-245-BXSE") {
+            $('.well-played').fadeIn()
+            $('.check').fadeIn()
+        } else {
+            $('.wrong-code').fadeIn()
+            setTimeout(function () {
+                $('.wrong-code').fadeOut()
+            }, 1000)
+        }
+    });
+    $('.code-input').keyup(function(e){
+        if(e.keyCode == 13)
+        {
+            $(this).trigger("enterKey");
+        }
+    });
+
     if (localStorage.getItem('bsm-lecentre-preloader') !== 'true') {
         ($('.loader-wrapper')).css("display", "block");
         loaderSpinner();

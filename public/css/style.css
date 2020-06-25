@@ -285,9 +285,17 @@ a {
     font-size: 18px;
     margin-top: 10px;
 }
+.result-wrapper {
+    height: 80px;
+}
 .well-played {
     font-size: 25px;
     font-weight: 300;
+    display: none;
+}
+.wrong-code {
+    font-size: 25px;
+    display: none;
 }
 .left-places {
     font-style: italic;
@@ -948,4 +956,16 @@ input::placeholder {
 }
 .position-initial {
     position: initial !important;
+}
+
+.check {
+    display: none;
+    transform: rotate(45deg);
+    height: 19px;
+    width: 13px;
+    right: 95px;
+    top: 20px;
+    position: absolute;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
 }
