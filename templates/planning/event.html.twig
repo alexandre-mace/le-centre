@@ -1,9 +1,9 @@
 {% if odd == true %}
     <div class="row position-relative planning-row align-items-center my-5">
         <a href="{{ path('exposition', {id: exposition.id}) }}" class="col-4 offset-1 d-flex flex-column planning-over text-right move">
-            <div>{{ exposition.title }}</div>
-            <div>{{ exposition.shortDescription }}</div>
-            <div>Initiée par l'Institut Français, cette exposition fera l'état des lieux de la scène artistique africaine. Elle accompagne les chroniques de la Base Sous-Marine, d'hier à aujourd'hui.</div>
+            <div class="planning-expo-title">{{ exposition.title }}</div>
+            <div class="planning-expo-description">{{ exposition.shortDescription }}</div>
+            <div class="planning-expo-text">Initiée par l'Institut Français, cette exposition fera l'état des lieux de la scène artistique africaine. Elle accompagne les chroniques de la Base Sous-Marine, d'hier à aujourd'hui.</div>
         </a>
         <a href="{{ path('exposition', {id: exposition.id}) }}" class="planning-first-photo-wrapper">
             <div class="planning-first-photo" style="background-image: url(/uploads/images/{{ exposition.tinyImage }})">

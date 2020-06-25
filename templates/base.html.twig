@@ -5,9 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}Le centre{% endblock %}</title>
         {% block stylesheets %}
+            <link href="{{ asset('css/normalize.css') }}" rel="stylesheet"/>
+            <link href="{{ asset('css/font.css') }}" rel="stylesheet"/>
+            <link rel="stylesheet" href="https://fr.allfont.net/allfont.css?fonts=courier"/>
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
             <link rel="stylesheet" href="/css/style.css">
-            <link href="{{ asset('css/normalize.css') }}" rel="stylesheet"/>
+
         {% endblock %}
         <script type="text/javascript" src="{{ asset('js/early-script.js') }}"></script>
     </head>
@@ -58,19 +61,19 @@
                         <div class="col-auto">
                             <div class="row align-items-center">
                                 <div class="mx-0 mx-lg-2 mx-xl-3 col-auto">
-                                    <div><a class="{% if app.request.get('_route') == 'planning' %}underline{% endif %}" href="{{ path('planning') }}">Expositions</a></div>
+                                    <div><a class="{% if app.request.get('_route') == 'planning' %}underline{% endif %} header__item" href="{{ path('planning') }}">Expositions</a></div>
                                 </div>
                                 <div class="mx-0 mx-lg-2 mx-xl-3 col-auto">
-                                    <div><a class="{% if app.request.get('_route') == 'practical_info' %}underline{% endif %}" href="{{ path('practical_info') }}">Infos pratiques</a></div>
+                                    <div><a class="{% if app.request.get('_route') == 'practical_info' %}underline{% endif %} header__item" href="{{ path('practical_info') }}">Infos pratiques</a></div>
                                 </div>
                                 <div class="mx-0 mx-lg-2 mx-xl-3 col-auto">
-                                    <div><a class="{% if app.request.get('_route') == 'access_plan' %}underline{% endif %}" href="{{ path('access_plan') }}">Venir sur le lieu</a></div>
+                                    <div><a class="{% if app.request.get('_route') == 'access_plan' %}underline{% endif %} header__item" href="{{ path('access_plan') }}">Venir sur le lieu</a></div>
                                 </div>
                                 <div class="mx-0 mx-lg-2 mx-xl-3 p-0 mr-0 col-auto">
-                                    <div><a class="header-ticket-link {% if app.request.get('_route') in ['ticket', 'ticket_pay', 'ticket_confirmation'] %}underline{% endif %}" href="{{ path('ticket') }}">Billetterie</a></div>
+                                    <div><a class="header-ticket-link {% if app.request.get('_route') in ['ticket', 'ticket_pay', 'ticket_confirmation'] %}underline{% endif %} header__item" href="{{ path('ticket') }}">Billetterie</a></div>
                                 </div>
                                 <div class="mx-0 mx-lg-2 mx-xl-3 col d-flex">
-                                    <div class="underline-text">FR</div> <div class="ml-1">/ EN</div>
+                                    <div class="underline-text header__item">FR</div> <div class="ml-1 header__item">/ EN</div>
                                 </div>
                             </div>
                         </div>
