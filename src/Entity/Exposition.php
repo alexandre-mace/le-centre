@@ -564,7 +564,7 @@ class Exposition
     /**
      * @return File
      */
-    public function getHomeImage1File(): File
+    public function getHomeImage1File()
     {
         return $this->homeImage1File;
     }
@@ -585,7 +585,7 @@ class Exposition
     /**
      * @return File
      */
-    public function getHomeImage2File(): File
+    public function getHomeImage2File()
     {
         return $this->homeImage2File;
     }
