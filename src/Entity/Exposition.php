@@ -497,7 +497,7 @@ class Exposition
     /**
      * @return File
      */
-    public function getPlanningImage2File(): File
+    public function getPlanningImage2File()
     {
         return $this->planningImage2File;
     }
