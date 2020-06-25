@@ -181,10 +181,10 @@ $(document).ready(function () {
                 ($('.loader-wrapper')).css("background-color", "transparent");
                 (loader).fadeOut();
                 setTimeout(function () {
-                    ($('.loader-wrapper')).css("display", "none");
-                }, 300)
+                    ($('.loader-wrapper')).fadeOut()
+                }, 100)
                 /*Set time in milisec */
-            },1200);
+            },1900);
         });
 
     }
@@ -198,7 +198,7 @@ $(document).ready(function () {
             $('.wrong-code').fadeIn()
             setTimeout(function () {
                 $('.wrong-code').fadeOut()
-            }, 1000)
+            }, 1500)
         }
     });
     $('.code-input').keyup(function(e){
@@ -211,20 +211,27 @@ $(document).ready(function () {
     if (localStorage.getItem('bsm-lecentre-preloader') !== 'true') {
         ($('.loader-wrapper')).css("display", "block");
         loaderSpinner();
+        var loaderWrapper = document.getElementById('loader-wrapper');
+        var animItem = bodymovin.loadAnimation({
+            wrapper: loaderWrapper,
+            animType: 'svg',
+            loop: false,
+            path: '/anims/anim-logo-centre_v2.json'
+        });
     }
     localStorage.setItem('bsm-lecentre-preloader', 'true');
 
     // ripple
-    $('.water').ripples({
-        resolution: 256,
-        dropRadius: 20,
-        perturbance: 0.002,
-    });
-
-    $('.home-main').ripples({
-        resolution: 256,
-        dropRadius: 20,
-        perturbance: 0.002,
-    });
+    // $('.water').ripples({
+    //     resolution: 256,
+    //     dropRadius: 20,
+    //     perturbance: 0.002,
+    // });
+    //
+    // $('.home-main').ripples({
+    //     resolution: 256,
+    //     dropRadius: 20,
+    //     perturbance: 0.002,
+    // });
 });
 
