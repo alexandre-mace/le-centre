@@ -18,17 +18,20 @@
                 <div class="col-9 offset-2">
                     <div class="ml-4 pl-2 d-flex flex-column">
                         <div class="mb-2 ticket-reserve">Réserver votre billet</div>
-                        <div class="d-flex"><input class="w-100" type="text"></div>
-                        <div class="d-flex"><input class="w-100" type="text"></div>
+                        <div class="d-flex"><input placeholder="12/04/2021" class="mock-input w-100" type="text"></div>
+                        <div class="d-flex position-relative"><input placeholder="1 entrée - plein tarif" class="mock-input w-100" type="text"><div class="base-arrow-wrapper"><i class="base-arrow down"></i></div></div>
                         <div class="d-flex"><input placeholder="Adresse mail" class="w-100" type="text"></div>
                         <div class="d-flex"><input placeholder="Numéro de téléphone" class="w-100" type="text"></div>
+                        <div class="mt-3 font-weight-bold">
+                            <div>Pour les tarifs gratuits, nous vérifions vos justificatifs à l’entrée.</div>
+                        </div>
                         <div>
                             <div class="d-flex align-items-center mt-3">
                                 <label class="custom-checkbox">
                                     <input type="checkbox">
                                     <span class="checkmark"></span>
                                 </label>
-                                <div class="ml-3 d-inline ticket-legals">
+                                <div class="ml-2 d-inline ticket-legals">
                                     J'accepte les <span class="underline">Conditions générales de vente</span> du Centre.</div>
                                 </div>
                             </div>
@@ -38,7 +41,7 @@
                 </div>
             </div>
             <div class="col-6">
-                <div class="col-7 pt-5 offset-1">
+                <div class="col-8 pt-5 offset-1">
                     <div class="ticket-basket">VOTRE PANIER</div>
                     <div class="ticket-resume row m-0">
                         <div class="col-6 mb-3 font-weight-bold">
@@ -72,15 +75,15 @@
                     <div class="row mx-0 justify-content-end p-3">
                         <div class="col p-0">
                             <div class="row">
-                                <div class="col-3 text-right ml-auto font-weight-light">Total</div>
+                                <div class="col-4 text-right ml-auto font-weight-light">Total</div>
                                 <div class="col-3 text-right font-weight-light">8 €</div>
                             </div>
                             <div class="row">
-                                <div class="col-3 text-right ml-auto font-weight-light">TVA</div>
+                                <div class="col-4 text-right ml-auto font-weight-light">TVA</div>
                                 <div class="col-3 text-right font-weight-light">0.80 €</div>
                             </div>
                             <div class="row">
-                                <div class="col-3 text-right ml-auto font-weight-bold">Total TTC</div>
+                                <div class="col-4 text-right ml-auto font-weight-bold">Total TTC</div>
                                 <div class="col-3 text-right font-weight-light">8.80 €</div>
                             </div>
                         </div>
@@ -93,5 +96,24 @@
             </div>
         </div>
     </div>
+    <div class="social pt-2 background-transparent">
+        <div class="container pt-4">
+            <div class="row">
+                <div class="col text-center mt-5">
+                    <div class="section-subtitle">NOUS SUIVRE</div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-auto text-center">
+                    <div class="social-image" style="background-image: url(/images/footer-icon-facebook.png)"></div>
+                </div>
+                <div class="col-auto text-center">
+                    <div class="social-image" style="background-image: url(/images/footer-icon-instagram.png)"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+{% endblock %}
+{% block social %}
 {% endblock %}

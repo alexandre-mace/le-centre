@@ -505,6 +505,10 @@ a:hover {
     background-color: #262626;
     color: white;
 }
+.mock-input::placeholder {
+    color: white;
+    font-style: initial !important;
+}
 .ticket-form {
     padding: 30px 40px 50px 40px;
     border-top: 10px solid white;
@@ -968,4 +972,25 @@ input::placeholder {
     position: absolute;
     border-bottom: 5px solid white;
     border-right: 5px solid white;
+}
+.base-arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.base-arrow.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.halfsize-input {
+    width: 136px;
+}
+.base-arrow-wrapper {
+    position: absolute;
+    top: 44%;
+    transform: translateY(-50%);
+    color: white;
+    right: 23px;
 }
