@@ -121,7 +121,7 @@ header * {
     position: relative;
     background-position: bottom;
     color: white;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 167px);
     padding-left: 40px;
     padding-right: 40px;
 }
