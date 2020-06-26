@@ -222,16 +222,16 @@ $(document).ready(function () {
     localStorage.setItem('bsm-lecentre-preloader', 'true');
 
     // ripple
-    // $('.water').ripples({
-    //     resolution: 256,
-    //     dropRadius: 20,
-    //     perturbance: 0.002,
-    // });
-    //
-    // $('.home-main').ripples({
-    //     resolution: 256,
-    //     dropRadius: 20,
-    //     perturbance: 0.002,
-    // });
+    $('.water').ripples({
+        resolution: 256,
+        dropRadius: 20,
+        perturbance: 0.002,
+    });
+
+    $('.home-main').ripples({
+        resolution: 256,
+        dropRadius: 20,
+        perturbance: 0.002,
+    });
 });
 

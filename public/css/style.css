@@ -104,6 +104,11 @@ header * {
     font-style: normal;
     font-size: 36px;
 }
+.current-event .current-event--main-square.big-dot::after {
+    width: 0 !important;
+    height: 0 !important;
+}
+
 .section-subtitle {
     font-weight: 500;
     font-style: normal;
